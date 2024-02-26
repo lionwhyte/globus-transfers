@@ -1,0 +1,620 @@
+[
+  {
+    "location_name": "Porec, Croatia",
+    "location_type": "city",
+    "location_lat": 45.2268187,
+    "location_lng": 13.5944023
+  },
+  {
+    "location_name": "Murvica, Zadar, Croatia",
+    "location_type": "town",
+    "location_lat": 44.145982,
+    "location_lng": 15.3208128
+  },
+  {
+    "location_name": "Podgorica Airport, Montenegro",
+    "location_type": "airport",
+    "location_lat": 42.3677625,
+    "location_lng": 19.2467344
+  },
+  {
+    "location_name": "Rijeka, Croatia",
+    "location_type": "city",
+    "location_lat": 45.3270631,
+    "location_lng": 14.442176
+  },
+  {
+    "location_name": "Biograd Na Moru, Croatia",
+    "location_type": "city",
+    "location_lat": 43.9373047,
+    "location_lng": 15.4435586
+  },
+  {
+    "location_name": "Maslenica, Croatia",
+    "location_type": "town",
+    "location_lat": 44.221311,
+    "location_lng": 15.5428388
+  },
+  {
+    "location_name": "Crvena Luka Resort, Croatia",
+    "location_type": "hotel",
+    "location_lat": 43.918717,
+    "location_lng": 15.4782553
+  },
+  {
+    "location_name": "Marina Baotic, Croatia",
+    "location_type": "marina",
+    "location_lat": 43.5167631,
+    "location_lng": 16.2325109
+  },
+  {
+    "location_name": "Split Ferry Port, Croatia",
+    "location_type": "port",
+    "location_lat": 43.5029356,
+    "location_lng": 16.4420328
+  },
+  {
+    "location_name": "Omis, Croatia",
+    "location_type": "town",
+    "location_lat": 43.44335590000001,
+    "location_lng": 16.6929175
+  },
+  {
+    "location_name": "Rovanjska, Croatia",
+    "location_type": "town",
+    "location_lat": 44.2515977,
+    "location_lng": 15.5405843
+  },
+  {
+    "location_name": "Debeljak, Croatia",
+    "location_type": "town",
+    "location_lat": 44.0473769,
+    "location_lng": 15.3620924
+  },
+  {
+    "location_name": "Privlaka, Croatia",
+    "location_type": "town",
+    "location_lat": 44.262375,
+    "location_lng": 15.1185858
+  },
+  {
+    "location_name": "Mostar, Bosnia and Herzegovina",
+    "location_type": "city",
+    "location_lat": 43.34377480000001,
+    "location_lng": 17.8077578
+  },
+  {
+    "location_name": "Zemunik Donji, Croatia",
+    "location_type": "town",
+    "location_lat": 44.1058067,
+    "location_lng": 15.3793184
+  },
+  {
+    "location_name": "Gajac, Croatia",
+    "location_type": "town",
+    "location_lat": 44.5324333,
+    "location_lng": 14.8979436
+  },
+  {
+    "location_name": "Marina Dalmacija, Croatia",
+    "location_type": "marina",
+    "location_lat": 44.0539585,
+    "location_lng": 15.307097
+  },
+  {
+    "location_name": "Brodarica, Croatia",
+    "location_type": "town",
+    "location_lat": 43.6812662,
+    "location_lng": 15.9178489
+  },
+  {
+    "location_name": "Skabrnja, Croatia",
+    "location_type": "town",
+    "location_lat": 44.0901895,
+    "location_lng": 15.4512125
+  },
+  {
+    "location_name": "Bibinje, Croatia",
+    "location_type": "town",
+    "location_lat": 44.0731738,
+    "location_lng": 15.2838313
+  },
+  {
+    "location_name": "Ražanj, Croatia",
+    "location_type": "town",
+    "location_lat": 43.5110638,
+    "location_lng": 15.9764648
+  },
+  {
+    "location_name": "Zukve, Croatia",
+    "location_type": "town",
+    "location_lat": 44.250697,
+    "location_lng": 15.2121236
+  },
+  {
+    "location_name": "Makarska, Croatia",
+    "location_type": "town",
+    "location_lat": 43.2937769,
+    "location_lng": 17.0215239
+  },
+  {
+    "location_name": "Pakoštane, Croatia",
+    "location_type": "town",
+    "location_lat": 43.9071991,
+    "location_lng": 15.5088842
+  },
+  {
+    "location_name": "Caska, Croatia",
+    "location_type": "town",
+    "location_lat": 44.5506941,
+    "location_lng": 14.9196506
+  },
+  {
+    "location_name": "Ljubljana Airport, Slovenia",
+    "location_type": "airport",
+    "location_lat": 46.2285985,
+    "location_lng": 14.454191
+  },
+  {
+    "location_name": "Skradin, Croatia",
+    "location_type": "town",
+    "location_lat": 43.8176375,
+    "location_lng": 15.923255
+  },
+  {
+    "location_name": "Medjugorje, Croatia",
+    "location_type": "city",
+    "location_lat": 43.200913,
+    "location_lng": 17.6629672
+  },
+  {
+    "location_name": "Plitvice Lakes National Park, Croatia",
+    "location_type": "park",
+    "location_lat": 44.8653966,
+    "location_lng": 15.5820119
+  },
+  {
+    "location_name": "Starigrad Paklenica, Croatia",
+    "location_type": "town",
+    "location_lat": 44.296009,
+    "location_lng": 15.4386463
+  },
+  {
+    "location_name": "Poljica, Zadar, Croatia",
+    "location_type": "town",
+    "location_lat": 44.2198632,
+    "location_lng": 15.285802
+  },
+  {
+    "location_name": "Seget Vranjica, Croatia",
+    "location_type": "city",
+    "location_lat": 43.5099941,
+    "location_lng": 16.1870354
+  },
+  {
+    "location_name": "Trogir, Croatia",
+    "location_type": "city",
+    "location_lat": 43.51638699999999,
+    "location_lng": 16.2501894
+  },
+  {
+    "location_name": "Slivnica, Croatia",
+    "location_type": "town",
+    "location_lat": 44.2408697,
+    "location_lng": 15.4476471
+  },
+  {
+    "location_name": "Visocane, Croatia",
+    "location_type": "town",
+    "location_lat": 44.2039224,
+    "location_lng": 15.3469923
+  },
+  {
+    "location_name": "Novalja, Croatia",
+    "location_type": "city",
+    "location_lat": 44.5561811,
+    "location_lng": 14.8854242
+  },
+  {
+    "location_name": "Venice, Italy",
+    "location_type": "city",
+    "location_lat": 45.4408474,
+    "location_lng": 12.3155151
+  },
+  {
+    "location_name": "Split, Croatia",
+    "location_type": "city",
+    "location_lat": 43.5147118,
+    "location_lng": 16.4435148
+  },
+  {
+    "location_name": "Sinj, Croatia",
+    "location_type": "city",
+    "location_lat": 43.702943,
+    "location_lng": 16.6375286
+  },
+  {
+    "location_name": "Marina Frapa, Croatia",
+    "location_type": "marina",
+    "location_lat": 43.5316998,
+    "location_lng": 15.9602378
+  },
+  {
+    "location_name": "Opatija, Croatia",
+    "location_type": "city",
+    "location_lat": 45.3376197,
+    "location_lng": 14.305196
+  },
+  {
+    "location_name": "Zadar, Croatia",
+    "location_type": "city",
+    "location_lat": 44.119371,
+    "location_lng": 15.2313648
+  },
+  {
+    "location_name": "Pag, Croatia",
+    "location_type": "town",
+    "location_lat": 44.4672189,
+    "location_lng": 14.9916876
+  },
+  {
+    "location_name": "Brisevo, Croatia",
+    "location_type": "town",
+    "location_lat": 44.1628882,
+    "location_lng": 15.3054558
+  },
+  {
+    "location_name": "Zagreb, Croatia",
+    "location_type": "city",
+    "location_lat": 45.8150108,
+    "location_lng": 15.981919
+  },
+  {
+    "location_name": "Baric Draga, Croatia",
+    "location_type": "town",
+    "location_lat": 44.3766256,
+    "location_lng": 15.2669665
+  },
+  {
+    "location_name": "Mandre, Croatia",
+    "location_type": "town",
+    "location_lat": 44.47768629999999,
+    "location_lng": 14.9200717
+  },
+  {
+    "location_name": "Sibenik, Croatia",
+    "location_type": "city",
+    "location_lat": 43.7350196,
+    "location_lng": 15.8952045
+  },
+  {
+    "location_name": "Petrčane, Croatia",
+    "location_type": "town",
+    "location_lat": 44.1874311,
+    "location_lng": 15.1600966
+  },
+  {
+    "location_name": "Marina Sangulin, Croatia",
+    "location_type": "marina",
+    "location_lat": 43.9397056,
+    "location_lng": 15.4418954
+  },
+  {
+    "location_name": "Stara Novalja, Croatia",
+    "location_type": "town",
+    "location_lat": 44.5965994,
+    "location_lng": 14.8766666
+  },
+  {
+    "location_name": "Tisno, Croatia",
+    "location_type": "city",
+    "location_lat": 43.7974664,
+    "location_lng": 15.6421092
+  },
+  {
+    "location_name": "Marina Tankerkomerc, Croatia",
+    "location_type": "marina",
+    "location_lat": 44.1190005,
+    "location_lng": 15.2278746
+  },
+  {
+    "location_name": "Marina Agana, Croatia",
+    "location_type": "marina",
+    "location_lat": 43.5137033,
+    "location_lng": 16.112295
+  },
+  {
+    "location_name": "Budapest, Hungary",
+    "location_type": "city",
+    "location_lat": 47.497912,
+    "location_lng": 19.040235
+  },
+  {
+    "location_name": "Zrce Beach, Croatia",
+    "location_type": "beach",
+    "location_lat": 44.5407328,
+    "location_lng": 14.9142232
+  },
+  {
+    "location_name": "Budva, Montenegro",
+    "location_type": "city",
+    "location_lat": 42.2911489,
+    "location_lng": 18.840295
+  },
+  {
+    "location_name": "Marina, Croatia",
+    "location_type": "marina",
+    "location_lat": 43.51410370000001,
+    "location_lng": 16.1076867
+  },
+  {
+    "location_name": "Bilice, Croatia",
+    "location_type": "town",
+    "location_lat": 43.789138,
+    "location_lng": 15.875474
+  },
+  {
+    "location_name": "Dubrovnik, Croatia",
+    "location_type": "city",
+    "location_lat": 42.65066059999999,
+    "location_lng": 18.0944238
+  },
+  {
+    "location_name": "Novigrad, Zadar, Croatia",
+    "location_type": "town",
+    "location_lat": 44.18117549999999,
+    "location_lng": 15.5489698
+  },
+  {
+    "location_name": "Smilcic, Croatia",
+    "location_type": "town",
+    "location_lat": 44.12653359999999,
+    "location_lng": 15.504623
+  },
+  {
+    "location_name": "Zaton, Nin, Croatia",
+    "location_type": "town",
+    "location_lat": 44.21958799999999,
+    "location_lng": 15.1722405
+  },
+  {
+    "location_name": "Lukovo Sugarje, Croatia",
+    "location_type": "town",
+    "location_lat": 44.436924,
+    "location_lng": 15.1925106
+  },
+  {
+    "location_name": "Venice Treviso Airport, Italy",
+    "location_type": "airport",
+    "location_lat": 45.6498881,
+    "location_lng": 12.1944795
+  },
+  {
+    "location_name": "Pula Airport, Croatia",
+    "location_type": "airport",
+    "location_lat": 44.8992174,
+    "location_lng": 13.9234074
+  },
+  {
+    "location_name": "Rupalj, Croatia",
+    "location_type": "town",
+    "location_lat": 44.1833512,
+    "location_lng": 15.4128912
+  },
+  {
+    "location_name": "Pula, Croatia",
+    "location_type": "city",
+    "location_lat": 44.8666232,
+    "location_lng": 13.8495788
+  },
+  {
+    "location_name": "Kastela, Croatia",
+    "location_type": "town",
+    "location_lat": 43.5643253,
+    "location_lng": 16.3581527
+  },
+  {
+    "location_name": "Jezera, Croatia",
+    "location_type": "town",
+    "location_lat": 43.7864033,
+    "location_lng": 15.6432564
+  },
+  {
+    "location_name": "Vidalici, Croatia",
+    "location_type": "town",
+    "location_lat": 44.5374113,
+    "location_lng": 14.9532889
+  },
+  {
+    "location_name": "Sveti Petar na Moru, Croatia",
+    "location_type": "town",
+    "location_lat": 43.9995711,
+    "location_lng": 15.3735522
+  },
+  {
+    "location_name": "Podgorica, Montenegro",
+    "location_type": "city",
+    "location_lat": 42.4304196,
+    "location_lng": 19.2593642
+  },
+  {
+    "location_name": "Tribanj, Croatia",
+    "location_type": "town",
+    "location_lat": 44.3496933,
+    "location_lng": 15.3165259
+  },
+  {
+    "location_name": "Zadar Airport, Croatia",
+    "location_type": "airport",
+    "location_lat": 44.0964983,
+    "location_lng": 15.3533664
+  },
+  {
+    "location_name": "Vrsi, Croatia",
+    "location_type": "town",
+    "location_lat": 44.2647784,
+    "location_lng": 15.2322074
+  },
+  {
+    "location_name": "Dubrovnik Airport, Croatia",
+    "location_type": "city",
+    "location_lat": 42.5603174,
+    "location_lng": 18.2621872
+  },
+  {
+    "location_name": "Nin, Croatia",
+    "location_type": "town",
+    "location_lat": 44.2423373,
+    "location_lng": 15.183695
+  },
+  {
+    "location_name": "Rovinj, Croatia",
+    "location_type": "city",
+    "location_lat": 45.0811661,
+    "location_lng": 13.6387067
+  },
+  {
+    "location_name": "Solin, Croatia",
+    "location_type": "city",
+    "location_lat": 43.5422549,
+    "location_lng": 16.4919632
+  },
+  {
+    "location_name": "Baska Voda, Croatia",
+    "location_type": "city",
+    "location_lat": 43.3572645,
+    "location_lng": 16.9520477
+  },
+  {
+    "location_name": "Split Airport, Croatia",
+    "location_type": "airport",
+    "location_lat": 43.5367044,
+    "location_lng": 16.2990251
+  },
+  {
+    "location_name": "Vir, Croatia",
+    "location_type": "town",
+    "location_lat": 44.3005078,
+    "location_lng": 15.0859668
+  },
+  {
+    "location_name": "Zagreb Airport, Croatia",
+    "location_type": "airport",
+    "location_lat": 45.7407462,
+    "location_lng": 16.0674565
+  },
+  {
+    "location_name": "Drvenik, Croatia",
+    "location_type": "town",
+    "location_lat": 43.1560519,
+    "location_lng": 17.2463201
+  },
+  {
+    "location_name": "Policnik, Croatia",
+    "location_type": "town",
+    "location_lat": 44.1775584,
+    "location_lng": 15.3747275
+  },
+  {
+    "location_name": "Krka Waterfalls National Park, Croatia",
+    "location_type": "park",
+    "location_lat": 43.8666017,
+    "location_lng": 15.9724838
+  },
+  {
+    "location_name": "Posedarje, Croatia",
+    "location_type": "town",
+    "location_lat": 44.2120433,
+    "location_lng": 15.4790862
+  },
+  {
+    "location_name": "Primosten, Croatia",
+    "location_type": "town",
+    "location_lat": 43.586316,
+    "location_lng": 15.9230156
+  },
+  {
+    "location_name": "Sukošan, Croatia",
+    "location_type": "town",
+    "location_lat": 44.0470411,
+    "location_lng": 15.3150024
+  },
+  {
+    "location_name": "Vrana, Croatia",
+    "location_type": "town",
+    "location_lat": 43.948571,
+    "location_lng": 15.5673225
+  },
+  {
+    "location_name": "Vodice, Croatia",
+    "location_type": "town",
+    "location_lat": 43.7611122,
+    "location_lng": 15.7787599
+  },
+  {
+    "location_name": "Marina Borik, Croatia",
+    "location_type": "marina",
+    "location_lat": 44.1304896,
+    "location_lng": 15.2099736
+  },
+  {
+    "location_name": "Tinj, Croatia",
+    "location_type": "town",
+    "location_lat": 44.0205102,
+    "location_lng": 15.4760066
+  },
+  {
+    "location_name": "Falkensteiner Punta Skala, Croatia",
+    "location_type": "hotel",
+    "location_lat": 44.1942568,
+    "location_lng": 15.1497918
+  },
+  {
+    "location_name": "Ljubljana, Slovenia",
+    "location_type": "city",
+    "location_lat": 46.0569465,
+    "location_lng": 14.5057515
+  },
+  {
+    "location_name": "Srima, Croatia",
+    "location_type": "town",
+    "location_lat": 43.7455383,
+    "location_lng": 15.8038406
+  },
+  {
+    "location_name": "Podstrana, Croatia",
+    "location_type": "city",
+    "location_lat": 43.4858487,
+    "location_lng": 16.5493816
+  },
+  {
+    "location_name": "Pazin, Croatia",
+    "location_type": "city",
+    "location_lat": 45.2397599,
+    "location_lng": 13.9373092
+  },
+  {
+    "location_name": "Kozino, Croatia",
+    "location_type": "town",
+    "location_lat": 44.1712977,
+    "location_lng": 15.1937456
+  },
+  {
+    "location_name": "Marina Kornati, Croatia",
+    "location_type": "marina",
+    "location_lat": 43.942583,
+    "location_lng": 15.445618
+  },
+  {
+    "location_name": "Murter, Croatia",
+    "location_type": "town",
+    "location_lat": 43.8083553,
+    "location_lng": 15.6002024
+  },
+  {
+    "location_name": "Rogoznica, Croatia",
+    "location_type": "city",
+    "location_lat": 43.535286,
+    "location_lng": 15.966747
+  }
+]

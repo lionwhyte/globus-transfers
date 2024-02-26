@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{{asset('images/favicon.ico')}}" />
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="//unpkg.com/alpinejs" defer></script>
+    {{--
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css" /> --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    @if(request()->is('search'))
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $apiKey }}&callback=initMap"></script>
+    @endif
+    <title>GLOBUS TRANSFERS | Passenger Transportation Services</title>
+</head>
+
+<body>
+
+    @include('components.header')
+
+    {{-- Main Content --}}
+    <main id="main-content">
+        @yield('content')
+    </main>
+
+    <script src="{{ asset('js/transitions.js') }}"></script>
+
+    @if(request()->is('/') || request()->is('search') || Route::is('reservation.create') || request()->is('contact'))
+    <script>
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        flatpickr('#datepicker', {  
+            allowInput: true, // prevent "readonly" prop
+            // dateFormat: 'Y-m-d',
+            dateFormat: 'F-d-Y',
+            minDate: tomorrow, // Disable past dates
+            // Additional configuration options can be added here
+        });
+    </script>
+    <script src="{{ asset('js/fetch.js') }}"></script>
+    @endif
+    @include('components.flash-message') 
+</body>
+
+</html>

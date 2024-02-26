@@ -1,0 +1,7 @@
+/* styles.css */
+
+.taxi-squares-border{
+    border-bottom: 5px solid;
+    padding: 5px;
+    border-image: linear-gradient(to right, rgb(17 24 39) 50%, rgb(251 191 36) 0%) 50 round;
+}

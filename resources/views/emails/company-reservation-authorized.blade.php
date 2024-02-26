@@ -1,0 +1,1 @@
+<p>{{ ucfirst($reservationData['first_name']) }} has made a reservation</p>
