@@ -47,7 +47,7 @@
     <br>
     <section>
         <h2>Thank You for Choosing Our Taxi Transfer Service!</h2>
-        <p>Dear {{ ucfirst($reservationData['first_name']) }},</p>
+        <p>Dear {{ ucfirst($routeAndReservationData['first_name']) }},</p>
         <p>Your taxi reservation has been created. Our team will review it within the next 6 to 12 hours, and we'll notify you once the reservation is confirmed.</p>
         <p>We're looking forward to providing you with a safe and comfortable journey.</p>
         <p>If you have any questions or need assistance, please feel free to <a href="mailto:luka.predovan01@gmail.com">contact our customer support</a>.</p>
@@ -62,19 +62,19 @@
             </tr>
             <tr>
                 <td>Full name</td>
-                <td>{{ ucfirst($reservationData['first_name']) . ' ' . ucfirst($reservationData['last_name'])}}</td>
+                <td>{{ ucfirst($routeAndReservationData['first_name']) . ' ' . ucfirst($routeAndReservationData['last_name'])}}</td>
             </tr>
             <tr>
                 <td>E-mail</td>
-                <td>{{ $reservationData['email'] }}</td>
+                <td>{{ $routeAndReservationData['email'] }}</td>
             </tr>
             <tr>
                 <td>Phone</td>
-                <td>{{ $reservationData['phone'] }}</td>
+                <td>{{ $routeAndReservationData['phone'] }}</td>
             </tr>
             <tr>
                 <td>Message</td>
-                <td>{{ $reservationData['order_comments'] }}</td>
+                <td>{{ $routeAndReservationData['order_comments'] }}</td>
             </tr>
         </table>
         <table border="1" style="border-collapse: collapse;">
@@ -83,62 +83,64 @@
             </tr>
             <tr>
                 <td>Number of passengers</td>
-                <td>{{ $reservationData['passengers'] }}</td>
+                <td>{{ $routeAndReservationData['passengers'] }}</td>
             </tr>
 
-            @if ($reservationData['infant_seat'] || $reservationData['child_seat'] || $reservationData['booster_seat'])
+            @if ($routeAndReservationData['infant_seat'] || $routeAndReservationData['child_seat'] || $routeAndReservationData['booster_seat'])
             <tr>
                 <td>Infant seats</td>
-                <td>{{ $reservationData['infant_seat'] }}</td>
+                <td>{{ $routeAndReservationData['infant_seat'] }}</td>
             </tr>
             <tr>
                 <td>Child seats</td>
-                <td>{{ $reservationData['child_seat'] }}</td>
+                <td>{{ $routeAndReservationData['child_seat'] }}</td>
             </tr>
             <tr>
                 <td>Booster seats</td>
-                <td>{{ $reservationData['booster_seat'] }}</td>
+                <td>{{ $routeAndReservationData['booster_seat'] }}</td>
             </tr>
             @endif
 
-            @if ($reservationData['luggage'])
+            @if ($routeAndReservationData['luggage'])
             <tr>
                 <td>Luggage</td>
-                <td>{{ $reservationData['luggage'] }}</td>
+                <td>{{ $routeAndReservationData['luggage'] }}</td>
             </tr>
             @endif
 
             <tr>
                 <td>Departure date</td>
-                <td>{{ $reservationData['departure-date'] }}</td>
+                <td>{{ $routeAndReservationData['departure-date'] }}</td>
             </tr>
             <tr>
                 <td>Departure time</td>
-                <td>{{ $reservationData['pickup-time'] }}</td>
+                <td>{{ $routeAndReservationData['pickup-time'] }}</td>
             </tr>
             <tr>
                 <td>Departure address</td>
-                <td>{{ $reservationData['pick_up_address'] }}</td>
+                <td>{{ $routeAndReservationData['pick_up_address'] }}</td>
             </tr>
             <tr>
                 <td>Destination address</td>
-                <td>{{ $reservationData['destination_address'] }}</td>
+                <td>{{ $routeAndReservationData['destination_address'] }}</td>
             </tr>
-
-            @if ($reservationData['flight_number'])
+            @if ($routeAndReservationData['flight_number'])
             <tr>
                 <td>Flight number</td>
-                <td>{{ $reservationData['flight_number'] }}</td>
+                <td>{{ $routeAndReservationData['flight_number'] }}</td>
             </tr>
             @endif
-            
             <tr>
                 <td>Vehicle</td>
-                <td>{{ $reservationData['vehicle'] }}</td>
+                <td>{{ $routeAndReservationData['vehicle'] }}</td>
             </tr>
             <tr>
                 <td>Price for transfer</td>
-                <td>{{ $reservationData['total_price'] }} €</td>
+                <td>{{ $routeAndReservationData['total_price'] }} €</td>
+            </tr>
+            <tr>
+                <td>Payment method</td>
+                <td>{{ $routeAndReservationData['payment_option'] }}</td>
             </tr>
             <tr>
                 <td>Additional charges</td>
@@ -146,7 +148,7 @@
             </tr>
             <tr>
                 <td><strong>Total</strong></td>
-                <td><strong>{{ $reservationData['total_price'] }} €</strong></td>
+                <td><strong>{{ $routeAndReservationData['total_price'] }} €</strong></td>
             </tr>
         </table>
         <table border="1" style="border-collapse: collapse;">
@@ -155,8 +157,8 @@
                 <th>Destination</th>
             </tr>
             <tr>
-                <td>{{ $reservationData['departure'] }}</td>
-                <td>{{ $reservationData['destination'] }}</td>
+                <td>{{ $routeAndReservationData['departure'] }}</td>
+                <td>{{ $routeAndReservationData['destination'] }}</td>
             </tr>
         </table>
         <table border="1" style="border-collapse: collapse;">
@@ -165,8 +167,8 @@
                 <th>Duration</th>
             </tr>
             <tr>
-                <td>{{ $reservationData['distance'] }} km</td>
-                <td>{{ $reservationData['duration'] }}</td>
+                <td>{{ $routeAndReservationData['distance'] }} km</td>
+                <td>{{ $routeAndReservationData['duration'] }}</td>
             </tr>
         </table>
     </section>
@@ -174,7 +176,7 @@
     <br>
     <footer>
         <img src="https://www.freeiconspng.com/uploads/globe-png-22.png" alt="Logo" width="80">
-        <p><strong>Globus d.o.o <br> Ulica dr. Franje Tuđmana 83, Vrsi</strong></p>
+        <p><strong>Globus<br> Ulica dr. Franje Tuđmana 83, Vrsi</strong></p>
     </footer>
 </body>
 </html>

@@ -146,11 +146,13 @@ function clearInput(inputId) {
     const input = document.getElementById(inputId);
     const clearButton = input.previousElementSibling;
 
-    // Clear input value
+    // Clear input value and focus on input
     input.value = '';
+    input.focus();
 
     // Hide clear button
     clearButton.style.display = 'none';
+    
 }
 
 

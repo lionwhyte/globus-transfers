@@ -21,7 +21,7 @@
 <div class="mx-auto container px-6 md:px-4 lg:px-20 text-gray-600 xl:grid xl:grid-cols-7">
     <div class="col-span-5">
         <section class="pt-16 pb-8">
-            <p class="mb-10">We, <span class="font-bold">GLOBUS, Passenger Transport</span>, specialize in passenger transportation and on-demand passenger transfers. Our operations cover the regions of Dalmatia, Zadar, and Zagreb. Additionally, we offer vehicle rentals.</p>
+            <p class="mb-10">We, <span class="font-bold">GLOBUS Transfers</span>, specialize in passenger transportation and on-demand passenger transfers. Our operations cover the regions of Dalmatia, Zadar, and Zagreb. Additionally, we offer vehicle rentals.</p>
             <img src="{{asset('images/globus-transfers-1.jpg.webp')}}" alt="globus-transfers-1" class="w-full rounded">
         </section>
         

@@ -40,7 +40,7 @@ class UserReservationAuthorizedDirect extends Mailable
 
         return $this->view('emails.user-reservation-authorized-direct')
             ->with([
-                'reservationData' => $this->routeAndReservationData,
+                'routeAndReservationData' => $this->routeAndReservationData,
                 'bookingNumber' => $bookingNumber
                 ]) // Pass data to the view
             ->subject('Globus Transfer Reservation Details')

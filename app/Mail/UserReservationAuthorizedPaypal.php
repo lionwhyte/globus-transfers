@@ -12,15 +12,17 @@ class UserReservationAuthorizedPaypal extends Mailable
     use Queueable, SerializesModels;
 
     public $routeAndReservationData; // Pass data to the email view
+    public $invoice_number; // Pass data to the email view
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($routeAndReservationData)
+    public function __construct($routeAndReservationData, $invoice_number)
     {
         $this->routeAndReservationData = $routeAndReservationData;
+        $this->invoice_number = $invoice_number;
     }
 
     /**
@@ -32,8 +34,9 @@ class UserReservationAuthorizedPaypal extends Mailable
     {
         return $this->view('emails.user-reservation-authorized-paypal')
             ->with([
-                'reservationData' => $this->routeAndReservationData,
+                'routeAndReservationData' => $this->routeAndReservationData,
+                'invoice_number' => $this->invoice_number,
                 ]) // Pass data to the view
-            ->subject('Globus Transfer Reservation Details');
+            ->subject('Globus Transfer Reservation Details from');
     }
 }
