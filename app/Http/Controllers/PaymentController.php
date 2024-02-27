@@ -104,7 +104,7 @@ class PaymentController extends Controller
             // Send confirmation email to the user and company
             // Send the email with the attached invoice
             Mail::to($routeAndReservationData['email'])->send(new UserReservationAuthorizedDirect($routeAndReservationData, $invoice_number, $pdfFilePath));
-            Mail::to('toni.technoprom@gmail.com')->send(new CompanyReservationAuthorized($routeAndReservationData, $invoice_number));
+            Mail::to(env('MAIL_FROM_ADDRESS'))->send(new CompanyReservationAuthorized($routeAndReservationData, $invoice_number));
             session()->flush();
             return view('payment.success');
 
@@ -124,7 +124,7 @@ class PaymentController extends Controller
                 // Send confirmation email to the user
                 $invoice_number = $orderId;
                 Mail::to($routeAndReservationData['email'])->send(new UserReservationAuthorizedPaypal($routeAndReservationData, $invoice_number));
-                Mail::to('toni.technoprom@gmail.com')->send(new CompanyReservationAuthorized($routeAndReservationData, $invoice_number));
+                Mail::to(env('MAIL_FROM_ADDRESS'))->send(new CompanyReservationAuthorized($routeAndReservationData, $invoice_number));
                 session()->flush();
                 return view('payment.success');
             } else {
