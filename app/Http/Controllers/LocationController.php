@@ -8,6 +8,54 @@ use Illuminate\Http\Request;
 
 class LocationController extends Controller
 {
+
+    public function cities()
+    {
+        $locations = Location::where('location_type', 'city')->orderBy('location_name', 'asc')->get();
+        return view('destinations.index', ['locations' => $locations]);
+    }
+
+    public function airports()
+    {
+        $locations = Location::where('location_type', 'airport')->orderBy('location_name', 'asc')->get();
+        return view('destinations.index', ['locations' => $locations]);
+    }
+
+    public function ports()
+    {
+        $locations = Location::where('location_type', 'port')->orderBy('location_name', 'asc')->get();
+        return view('destinations.index', ['locations' => $locations]);
+    }
+
+    public function marinas()
+    {
+        $locations = Location::where('location_type', 'marina')->orderBy('location_name', 'asc')->get();
+        return view('destinations.index', ['locations' => $locations]);
+    }
+
+    public function parks()
+    {
+        $locations = Location::where('location_type', 'park')->orderBy('location_name', 'asc')->get();
+        return view('destinations.index', ['locations' => $locations]);
+    }
+
+    public function hotels()
+    {
+        $locations = Location::where('location_type', 'hotel')->orderBy('location_name', 'asc')->get();
+        return view('destinations.index', ['locations' => $locations]);
+    }
+
+    public function towns()
+    {
+        $locations = Location::where('location_type', 'town')->orderBy('location_name', 'asc')->get();
+        return view('destinations.index', ['locations' => $locations]);
+    }
+
+    public function beaches()
+    {
+        $locations = Location::where('location_type', 'beach')->orderBy('location_name', 'asc')->get();
+        return view('destinations.index', ['locations' => $locations]);
+    }
     
     public function getDepartureLocationsSuggestions(Request $request)
     {

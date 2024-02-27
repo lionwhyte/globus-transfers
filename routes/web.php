@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ReservationController;
 
 /*
@@ -41,3 +42,11 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
+Route::get('/destinations/cities', [LocationController::class, 'cities'])->name('destinations.cities');
+Route::get('/destinations/airports', [LocationController::class, 'airports'])->name('destinations.airports');
+Route::get('/destinations/ports', [LocationController::class, 'ports'])->name('destinations.ports');
+Route::get('/destinations/national-parks', [LocationController::class, 'parks'])->name('destinations.parks');
+Route::get('/destinations/marinas', [LocationController::class, 'marinas'])->name('destinations.marinas');
+Route::get('/destinations/hotels', [LocationController::class, 'hotels'])->name('destinations.hotels');
+Route::get('/destinations/towns', [LocationController::class, 'towns'])->name('destinations.towns');
+Route::get('/destinations/beaches', [LocationController::class, 'beaches'])->name('destinations.beaches');

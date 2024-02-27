@@ -24,7 +24,7 @@
                 <ul class="nav-list flex space-x-8 py-4">
                     <li><a href="/" class="p-1 border-b-2 border-cyan-600">HOME</a></li>
                     <li><a href="/about-us" class="p-1 border-b-2 transition hover:border-cyan-600">ABOUT US</a></li>
-                    <li><a href="#" class="p-1 border-b-2 transition hover:border-cyan-600">TAXI TRANSFERS</a></li>
+                    <li><a href="/destinations/cities" class="p-1 border-b-2 transition hover:border-cyan-600">DESTINATIONS</a></li>
                     <li><a href="/faq" class="p-1 border-b-2 transition hover:border-cyan-600">FAQ</a></li>
                     <li><a href="/contact" class="p-1 border-b-2 transition hover:border-cyan-600">CONTACT</a></li>
                 </ul>
@@ -58,8 +58,8 @@
                     class="block mb-0.5 py-1 px-4 bg-cyan-500">ABOUT US</a>
             </li>
             <li>
-                <a href="/taxi-transfers"
-                    class="block mb-0.5 py-1 px-4 bg-cyan-500">TAXI TRANSFERS</a>
+                <a href="/destinations/cities"
+                    class="block mb-0.5 py-1 px-4 bg-cyan-500">DESTINATIONS</a>
             </li>
             <li>
                 <a href="/faq"
