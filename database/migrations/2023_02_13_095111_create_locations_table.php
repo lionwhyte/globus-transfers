@@ -16,7 +16,10 @@ return new class extends Migration
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
             $table->string('location_name');
+            $table->string('location_slug', 100)->unique();
             $table->string('location_type');
+            $table->text('location_images')->nullable();
+            $table->text('location_description')->nullable();
             $table->double('location_lat');
             $table->double('location_lng');
             $table->timestamps();

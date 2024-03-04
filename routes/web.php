@@ -50,3 +50,5 @@ Route::get('/destinations/marinas', [LocationController::class, 'marinas'])->nam
 Route::get('/destinations/hotels', [LocationController::class, 'hotels'])->name('destinations.hotels');
 Route::get('/destinations/towns', [LocationController::class, 'towns'])->name('destinations.towns');
 Route::get('/destinations/beaches', [LocationController::class, 'beaches'])->name('destinations.beaches');
+
+Route::get('/destinations/{slug}', [LocationController::class, 'show'])->name("destinations.show");

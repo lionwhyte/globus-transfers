@@ -22,11 +22,11 @@
                     </a>
                 </div>
                 <ul class="nav-list flex space-x-8 py-4">
-                    <li><a href="/" class="p-1 border-b-2 border-cyan-600">HOME</a></li>
-                    <li><a href="/about-us" class="p-1 border-b-2 transition hover:border-cyan-600">ABOUT US</a></li>
-                    <li><a href="/destinations/cities" class="p-1 border-b-2 transition hover:border-cyan-600">DESTINATIONS</a></li>
-                    <li><a href="/faq" class="p-1 border-b-2 transition hover:border-cyan-600">FAQ</a></li>
-                    <li><a href="/contact" class="p-1 border-b-2 transition hover:border-cyan-600">CONTACT</a></li>
+                    <li><a href="/" class="p-1 border-b-2 {{ request()->is('/') ? 'border-cyan-600' : 'transition hover:border-cyan-600' }}">HOME</a></li>
+                    <li><a href="/about-us" class="p-1 border-b-2 {{ request()->is('about-us') ? 'border-cyan-600' : 'transition hover:border-cyan-600' }}">ABOUT US</a></li>
+                    <li><a href="/destinations/cities" class="p-1 border-b-2 {{ request()->is('destinations/*') ? 'border-cyan-600' : 'transition hover:border-cyan-600' }}">DESTINATIONS</a></li>
+                    <li><a href="/faq" class="p-1 border-b-2 {{ request()->is('faq') ? 'border-cyan-600' : 'transition hover:border-cyan-600' }}">FAQ</a></li>
+                    <li><a href="/contact" class="p-1 border-b-2 {{ request()->is('contact') ? 'border-cyan-600' : 'transition hover:border-cyan-600' }}">CONTACT</a></li>
                 </ul>
             </div>
             <div class="flex items-center h-full">

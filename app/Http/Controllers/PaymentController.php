@@ -219,12 +219,12 @@ class PaymentController extends Controller
         $base64ImageData = base64_encode(file_get_contents($filePath));
 
         // Calculate base_price with a 25% discount
-        $base_price = $routeAndReservationData['total_price'] * 0.75;
+        // $base_price = $routeAndReservationData['total_price'] * 0.75;
 
         // Format the price with two decimal places and a comma as the decimal separator
         $formatted_total_price = number_format($routeAndReservationData['total_price'], 2, ',', '.');
-        $formatted_base_price = number_format($base_price, 2, ',', '.');
-        $vat = number_format($routeAndReservationData['total_price'] - $base_price, 2, ',', '.');
+        // $formatted_base_price = number_format($base_price, 2, ',', '.');
+        // $vat = number_format($routeAndReservationData['total_price'] - $base_price, 2, ',', '.');
 
         $pdf = app('dompdf.wrapper')->loadView('invoices.custom', [
             'base64ImageData' => $base64ImageData,
@@ -234,8 +234,8 @@ class PaymentController extends Controller
             'invoice_date' => now()->format('d.m.Y. / H:i:s'),
             'invoice_expiration_date' => now()->addDays(7)->format('d.m.Y.'),
             'formatted_total_price' => $formatted_total_price,
-            'formatted_base_price' => $formatted_base_price,
-            'vat' => $vat
+            // 'formatted_base_price' => $formatted_base_price,
+            // 'vat' => $vat
         ]);
 
         // Save the PDF to storage

@@ -84,7 +84,7 @@ class RouteController extends Controller
                 'departureDate' => $departureDate,
                 'passengers' => $passengers,
                 'roundTrip' => $roundTrip,
-                'apiKey' => env('GOOGLE_MAPS_API_KEY')
+                // 'apiKey' => env('GOOGLE_MAPS_API_KEY')
             ]);
         } else {
             return redirect('contact');

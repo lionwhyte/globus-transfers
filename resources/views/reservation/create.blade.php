@@ -181,7 +181,7 @@
 
         {{-- UVJETI PLAĆANJA --}}
         <div class="col-span-4">
-            <div class="sticky top-20">
+            <div class="sticky top-32">
                 <div class="border rounded border-gray-300 p-8">
                     <h3 class="text-xl font-bold text-gray-700">YOUR ORDER</h3>
                     <div class="p-4 border-2 my-4 rounded">
@@ -197,7 +197,7 @@
                             <span class="text-lg mr-2 mt-1">TOTAL</span>
                             <span class="text-3xl">{{ $total_price }} €</span>
                         </p>
-                        <p class="text-xs mt-2">VAT included</p>
+                        {{-- <p class="text-xs mt-2">VAT included</p> --}}
                     </div>
 
 
@@ -224,7 +224,7 @@
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                     @enderror
 
-                    <div class="text-center mt-16">
+                    <div class="text-center mt-10">
                         <button type="submit" id="orderSubmitButton" onclick="submitButtonDisable('orderSubmitButton', 'orderForm')"
                             class="px-4 py-2 mt-4 md:mt-0 w-full rounded bg-amber-500 transition hover:bg-amber-600 text-white text-lg">
                             <span>BOOK NOW</span>

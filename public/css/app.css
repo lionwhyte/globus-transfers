@@ -5,3 +5,35 @@
     padding: 5px;
     border-image: linear-gradient(to right, rgb(17 24 39) 50%, rgb(251 191 36) 0%) 50 round;
 }
+
+article h3 {
+    font-size: 18px;
+    color: darkcyan;
+}
+
+article h2 {
+    font-size: 20px;
+    color: darkcyan;
+}
+
+.hero {
+    position: relative;
+    background-image: linear-gradient(to right, rgb(1, 55, 68) 65%, rgb(1, 55, 68, 0)), url("../images/globus-transfers-4.jpg.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-blend-mode: multiply; */
+    background-position: right;
+}
+
+@media only screen and (max-width: 1280px) {
+    .hero {
+        background-image: linear-gradient(to right, rgb(1, 55, 68) 20%, rgb(1, 55, 68, 0.5)), url("../images/globus-transfers-2.jpg.webp");
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .hero {
+        background-image: linear-gradient(to right, rgb(1, 55, 68) 10%, rgb(1, 55, 68, 0.5)), url("../images/globus-transfers-2.jpg.webp");
+    }
+}

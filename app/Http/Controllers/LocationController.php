@@ -56,6 +56,34 @@ class LocationController extends Controller
         $locations = Location::where('location_type', 'beach')->orderBy('location_name', 'asc')->get();
         return view('destinations.index', ['locations' => $locations]);
     }
+
+
+    public function show($slug)
+    {
+        $location = Location::where('location_slug', $slug)->firstOrFail();
+        $allowedLocations = [
+            "Split, Croatia", 
+            "Zadar, Croatia", 
+            "Novalja, Croatia", 
+            "Zagreb, Croatia", 
+            "Dubrovnik, Croatia", 
+            "Pula, Croatia",
+            "Split Airport, Croatia", 
+            "Zadar Airport, Croatia", 
+            "Zagreb Airport, Croatia", 
+            "Dubrovnik Airport, Croatia", 
+            "Pula Airport, Croatia",
+            "Ljubljana Airport, Slovenia",
+            "Venice Treviso Airport, Italy",
+            "Podgorica Airport, Montenegro",
+        ];
+
+        $routes = Route::where('departure_location_name', $location->location_name)
+            ->whereIn('destination_location_name', $allowedLocations)
+            ->orderBy('destination_location_name', 'asc')
+            ->get();
+        return view('destinations.show', ['location' => $location, 'routes' => $routes]);
+    }
     
     public function getDepartureLocationsSuggestions(Request $request)
     {

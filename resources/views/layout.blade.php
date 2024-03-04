@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    @if(request()->is('search'))
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $apiKey }}&callback=initMap"></script>
+    @if(request()->is('search') || request()->routeIs('destinations.show'))
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDig8jAYR_NW_T5DwHw2j5SWehUI91o-SI&callback=initMap"></script>
     @endif
     <title>GLOBUS TRANSFERS | Passenger Transportation Services</title>
 </head>
@@ -27,7 +27,7 @@
     @include('components.header')
 
     {{-- Main Content --}}
-    <main id="main-content">
+    <main id="main-content" class="text-gray-600">
         @yield('content')
     </main>
 

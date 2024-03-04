@@ -88,8 +88,8 @@
                         {{ $routeAndReservationData['departure'] }} - {{ $routeAndReservationData['destination'] }}
                         <br>Udaljenost rute: {{ $routeAndReservationData['distance'] }} km
                     </td>
-                    <td style="text-align: right;">25%</td>
-                    <td style="text-align: right;">{{ $formatted_base_price }} €</td>
+                    <td style="text-align: right;">0%</td>
+                    <td style="text-align: right;">{{ $formatted_total_price }} €</td>
                 </tr>
                 <tr>
                     <td colspan="2"><hr></td>
@@ -117,17 +117,20 @@
                 <p>
                     <strong>Napomena: </strong>Ovo nije fiskalizirani račun.
                 </p>
+                <p>
+                    <i>Oslobođeno PDV-a temeljem članka 90. st. 2  Zakona o PDV-u</i>
+                </p>
             </div>
             <div style="float: right;">
                 <br>
                 <table style="border: 1px solid gray; padding: 16px; border-radius: 8px;">
                     <tr>
-                        <td style="text-align: right; padding: 4px;"><strong>Osnovica</strong>(25%)</td>
-                        <td style="text-align: right; padding: 4px;"><strong>{{ $formatted_base_price }} </strong>€</td>
+                        <td style="text-align: right; padding: 4px;"><strong>Osnovica</strong>(0%)</td>
+                        <td style="text-align: right; padding: 4px;"><strong>{{ $formatted_total_price }} </strong>€</td>
                     </tr>
                     <tr>
-                        <td style="text-align: right; padding: 4px;"><strong>PDV </strong>(25%)</td>
-                        <td style="text-align: right; padding: 4px;"><strong>{{ $vat }} </strong>€</td>
+                        <td style="text-align: right; padding: 4px;"><strong>PDV </strong>(0%)</td>
+                        <td style="text-align: right; padding: 4px;"><strong>0,00 </strong>€</td>
                     </tr>
                     <tr>
                         <td style="text-align: right; padding: 4px;"><strong><h4>UKUPAN IZNOS</h4></strong></td>
@@ -138,13 +141,13 @@
         </section>
     </div>
     
-   <hr>
+   {{-- <hr>
    <div style="width: 100%; text-align: center;">
     <small>
         Globus Transfers d.o.o. za trgovinu i usluge • Društvo je upisano u registar Trgovačkog suda u Zagrebu / MBS: 081133926 • Temeljni kapital društva iznosi 265,00 eur i
         uplaćen je u cijelosti • Član uprave: Luka Predovan, direktor
     </small>
-   </div>
+   </div> --}}
   
   
 

@@ -17,10 +17,10 @@
         @include('partials.breadcrumbs')
     </div>
 </section>
-<section class="mx-auto container px-6 md:px-4 lg:px-20 text-gray-600">
+<section class="mx-auto container px-6 md:px-4 lg:px-20 text-gray-600 my-8">
     @include('partials.faq')
 </section>
-<section class="mx-auto container px-6 md:px-4 lg:px-20 text-gray-600">
+<section class="mx-auto container px-6 md:px-4 lg:px-20 text-gray-600 mb-12">
     @include('partials.contact-aside')
 </section>
 

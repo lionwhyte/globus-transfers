@@ -343,7 +343,7 @@
   },
   {
     "location_name": "Marina, Croatia",
-    "location_type": "marina",
+    "location_type": "city",
     "location_lat": 43.51410370000001,
     "location_lng": 16.1076867
   },
@@ -457,7 +457,7 @@
   },
   {
     "location_name": "Dubrovnik Airport, Croatia",
-    "location_type": "city",
+    "location_type": "airport",
     "location_lat": 42.5603174,
     "location_lng": 18.2621872
   },
