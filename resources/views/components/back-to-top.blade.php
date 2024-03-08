@@ -1,0 +1,1 @@
+<button class="fixed bottom-0 right-6 z-50 p-4 bg-gray-300 text-teal-500 rounded-t opacity-80 transition hover:text-teal-700 hidden" id="back-to-top"><i class="fa-solid fa-chevron-up"></i></button>

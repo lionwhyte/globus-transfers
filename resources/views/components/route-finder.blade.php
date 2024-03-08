@@ -1,4 +1,4 @@
-<section class="flex flex-col justify-center align-center text-gray-600 bg-cyan-800 mb-4 py-8 px-6">
+<section class="flex flex-col justify-center align-center text-gray-600 bg-gradient-to-br from-cyan-600 to-cyan-800 mb-4 py-8 px-6">
     
     <form action="/search" method="get" class="container flex flex-col my-6 space-y-4 mx-auto text-lg" id="mapForm">
         <div class="flex flex-col xl:flex-row xl:mx-auto space-y-2 xl:space-y-0 xl:space-x-8">

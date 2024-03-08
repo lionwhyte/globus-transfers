@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -17,12 +18,14 @@ class RouteController extends Controller
         $departureDate = $request->input('departure-date');
         $passengers = $request->input('passengers');
         $roundTrip = $request->input('round-trip') == true;
+
+        $dayAfterTomorrow = Carbon::now()->addDays(2)->format('F-d-Y');
         
         // Validate date
         $validator = Validator::make($request->all(), [
             'departure' => 'required',
             'destination' => 'required',
-            'departure-date' => 'required|date_format:"F-d-Y"|after_or_equal:tomorrow',
+            'departure-date' => 'required|date_format:"F-d-Y"|after_or_equal:' . $dayAfterTomorrow,
             'passengers' => 'required|integer|min:1|max:19',
         ]);
         
@@ -49,9 +52,11 @@ class RouteController extends Controller
             $distance = $routes->distance_km;
             $duration = $routes->duration;
 
-            $standardPrice = $roundTrip ? $routes->standardPrice * 2 : $routes->standardPrice;
-            $minivanPrice = $roundTrip ? $routes->minivanPrice * 2 : $routes->minivanPrice;
-            $minibusPrice = $roundTrip ? $routes->minibusPrice * 2 : $routes->minibusPrice;
+            $standardPrice = $roundTrip ? $routes->standardPrice + ($routes->standardPrice - ($routes->standardPrice * 0.2)) : $routes->standardPrice;
+            $minivanPrice = $roundTrip ? $routes->minivanPrice + ($routes->minivanPrice - ($routes->minivanPrice * 0.2)) : $routes->minivanPrice;
+            $minibusPrice = $roundTrip ? $routes->minibusPrice + ($routes->minibusPrice - ($routes->minibusPrice * 0.2)) : $routes->minibusPrice;
+
+            //$route->standardPrice + ($route->standardPrice - ($route->standardPrice * 0.2))
             
             //Store calculated data in the session
             Session::put('routeAndReservationData', [

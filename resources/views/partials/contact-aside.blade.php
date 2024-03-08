@@ -1,5 +1,5 @@
 <aside>
-    <h4 class="text-center bg-amber-500 rounded-t text-white py-6 text-lg">Need help booking?</h4>
+    <h4 class="text-center bg-gradient-to-br from-teal-600 to-teal-300 rounded-t text-white py-6 text-lg">Need help booking?</h4>
     <div class="p-4 space-y-3">
         <p>
             Reach out to our customer services team for assistance with any inquiries. Our office hours are from 08:00 to 19:00. 
@@ -13,9 +13,9 @@
             </a>
         </p>
         <p>
-            <a href="mailto:globus.transfers@gmail.com" class="contact-data space-x-1">
+            <a href="mailto:luka.predovan01@gmail.com" class="contact-data space-x-1">
                 <span class="icon icon-themeenergy_mail-2"><i class="fa-regular fa-envelope text-lg"></i></span>
-                <span class="text-cyan-600">globus.transfers@gmail.com</span>
+                <span class="text-cyan-600">luka.predovan01@gmail.com</span>
             </a>
         </p> 
     </div>

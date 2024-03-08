@@ -10,7 +10,7 @@
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-2 items-center text-center border rounded py-4">
             @if ($distance && $duration)
             <div class="col-span-2 sm:col-span-4 lg:col-span-1 lg:border-r px-2 h-full flex items-center">
-                <img src="{{asset('images/globus-standard-2.png')}}" alt="Standard Taxi Vehicle">
+                <img src="{{asset('images/globus-standard.png')}}" alt="Standard Taxi Vehicle">
             </div>
             
             <div class="col-span-2 sm:col-span-1 sm:border-r border-b sm:border-b-0 pb-8 sm:pb-0 px-2 h-full flex flex-col justify-center">

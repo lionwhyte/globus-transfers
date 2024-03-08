@@ -29,7 +29,7 @@
                 <br>
                 <br>
                 <p><strong>GLOBUS Transfers d.o.o</strong></p>
-                <p>Ulica dr. Franje Tuđmana 83 23235 Vrsi Hrvatska</p>
+                <p>Ulica dr. Franje Tuđmana 85 23235 Vrsi Hrvatska</p>
                 <p>OIB: 98595920</p>
                 <table style="margin: -5;">
                     <tr>
@@ -38,7 +38,7 @@
                     </tr>
                     <tr>
                         <td><img src="{{ public_path('images/envelope_icon.jpg') }}" alt="Logo" width="20"></td>
-                        <td>globus.transfers@gmail.com</td>
+                        <td>luka.predovan01@gmail.com</td>
                     </tr>
                     <tr>
                         <td><img src="{{ public_path('images/phone_icon.webp') }}" alt="Logo" width="15"></td>

@@ -28,7 +28,12 @@ async function getDepartureSuggestions(query) {
 
         debounceTimer = setTimeout(async () => {
             // Make a request to get location suggestions from the server
-            const response = await fetch(`http://globus-transfers.localhost/api/departure-suggestions?query=${query}`);
+            let currentURL = window.location.href;
+            if (currentURL.includes("#top")) {
+                // Use replace and assign the modified value back to currentURL
+                currentURL = currentURL.replace("#top", "");
+            }
+            const response = await fetch(`${currentURL}api/departure-suggestions?query=${query}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -77,7 +82,12 @@ async function getDestinationSuggestions(queryDeparture, queryDestination) {
 
         debounceTimer = setTimeout(async () => {
             // Make a request to get destination suggestions from the server
-            const response = await fetch(`http://globus-transfers.localhost/api/destination-suggestions?queryDeparture=${queryDeparture}&queryDestination=${queryDestination}`);
+            let currentURL = window.location.href;
+            if (currentURL.includes("#top")) {
+                // Use replace and assign the modified value back to currentURL
+                currentURL = currentURL.replace("#top", "");
+            }
+            const response = await fetch(`${currentURL}api/destination-suggestions?queryDeparture=${queryDeparture}&queryDestination=${queryDestination}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }

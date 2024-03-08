@@ -42,6 +42,18 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
+Route::get('/privacy-policy', function () {
+    return view('privacy-policy');
+});
+
+Route::get('/cookie-policy', function () {
+    return view('cookie-policy');
+})->name('cookie.policy');
+
+Route::get('/terms-and-conditions', function () {
+    return view('terms-and-conditions');
+});
+
 Route::get('/destinations/cities', [LocationController::class, 'cities'])->name('destinations.cities');
 Route::get('/destinations/airports', [LocationController::class, 'airports'])->name('destinations.airports');
 Route::get('/destinations/ports', [LocationController::class, 'ports'])->name('destinations.ports');

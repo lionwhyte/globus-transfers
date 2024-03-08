@@ -1,5 +1,5 @@
 <ul class="space-y-2">
-    <li class="p-4 rounded bg-amber-100 border-solid border-2 border-amber-500">
+    <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
         <button class="toggle text-start" onclick="toggleDetails(this)">
             <span class="toggle-icon">
                 <i class="fas fa-plus"></i>
@@ -18,7 +18,7 @@
                 If you anticipate a delay from the departure destination, please contact us so we can make necessary adjustments.</p>
         </div>
     </li>
-    <li class="p-4 rounded bg-amber-100 border-solid border-2 border-amber-500">
+    <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
         <button class="toggle text-start" onclick="toggleDetails(this)">
             <span class="toggle-icon">
                 <i class="fas fa-plus"></i>
@@ -36,7 +36,7 @@
                 providing local knowledge and tips. All our drivers speak English and are happy to assist you in any way.</p>
         </div>
     </li>
-    <li class="p-4 rounded bg-amber-100 border-solid border-2 border-amber-500">
+    <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
         <button class="toggle text-start" onclick="toggleDetails(this)">
             <span class="toggle-icon">
                 <i class="fas fa-plus"></i>
@@ -54,7 +54,7 @@
                 This makes it easy for you to locate us!</p>
         </div>
     </li>
-    <li class="p-4 rounded bg-amber-100 border-solid border-2 border-amber-500">
+    <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
         <button class="toggle text-start" onclick="toggleDetails(this)">
             <span class="toggle-icon">
                 <i class="fas fa-plus"></i>
@@ -72,7 +72,7 @@
                 The quoted price includes all costs to avoid any surprise expenses.</p>
         </div>
     </li>
-    <li class="p-4 rounded bg-amber-100 border-solid border-2 border-amber-500">
+    <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
         <button class="toggle text-start" onclick="toggleDetails(this)">
             <span class="toggle-icon">
                 <i class="fas fa-plus"></i>
@@ -91,7 +91,7 @@
                 If you have specific requests or need a different vehicle type, we can accommodate your needs.</p>
         </div>
     </li>
-    <li class="p-4 rounded bg-amber-100 border-solid border-2 border-amber-500">
+    <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
         <button class="toggle text-start" onclick="toggleDetails(this)">
             <span class="toggle-icon">
                 <i class="fas fa-plus"></i>

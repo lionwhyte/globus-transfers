@@ -1,8 +1,7 @@
 /* styles.css */
 
 .taxi-squares-border{
-    border-bottom: 5px solid;
-    padding: 5px;
+    border-top: 4px solid;
     border-image: linear-gradient(to right, rgb(17 24 39) 50%, rgb(251 191 36) 0%) 50 round;
 }
 
@@ -18,7 +17,7 @@ article h2 {
 
 .hero {
     position: relative;
-    background-image: linear-gradient(to right, rgb(1, 55, 68) 65%, rgb(1, 55, 68, 0)), url("../images/globus-transfers-4.jpg.webp");
+    background-image: linear-gradient(to right, rgb(1, 84, 105) 65%, rgb(1, 55, 68, 0)), url("../images/globus-transfers-4.jpg.webp");
     background-size: contain;
     background-repeat: no-repeat;
     /* background-blend-mode: multiply; */
@@ -27,13 +26,54 @@ article h2 {
 
 @media only screen and (max-width: 1280px) {
     .hero {
-        background-image: linear-gradient(to right, rgb(1, 55, 68) 20%, rgb(1, 55, 68, 0.5)), url("../images/globus-transfers-2.jpg.webp");
+        background-image: linear-gradient(to right, rgb(1, 84, 105)20%, rgb(1, 55, 68, 0.5)), url("../images/globus-transfers-2.jpg.webp");
         background-size: cover;
         background-position: center;
     }
 }
 @media only screen and (max-width: 800px) {
     .hero {
-        background-image: linear-gradient(to right, rgb(1, 55, 68) 10%, rgb(1, 55, 68, 0.5)), url("../images/globus-transfers-2.jpg.webp");
+        background-image: linear-gradient(to right, rgb(1, 84, 105)10%, rgb(1, 55, 68, 0.5)), url("../images/globus-transfers-2.jpg.webp");
     }
+}
+
+.animate-left-hero {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s, transform 1s;
+}
+
+.animate-top-hero {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 1s;
+}
+
+
+.animate-left-vehicles {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.animate-left-banner {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s, transform 1s;
+}
+
+.animate-right-banner {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.5s, transform 1s;
+}
+
+.in-view {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
 }

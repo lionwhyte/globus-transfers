@@ -170,7 +170,7 @@
     <br>
     <footer>
         <img src="https://www.freeiconspng.com/uploads/globe-png-22.png" alt="Logo" width="80">
-        <p><strong>Globus<br> Ulica dr. Franje Tuđmana 83, Vrsi</strong></p>
+        <p><strong>Globus<br> Ulica dr. Franje Tuđmana 85, Vrsi</strong></p>
     </footer>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<header class="text-gray-600 taxi-squares-border pb-6">
+<header class="text-gray-600 taxi-squares-border pb-6" id="top">
     <div class="mx-auto container px-6 md:px-4 lg:px-20 flex justify-between">
         <div class="logo">
             <a href="/">
@@ -16,9 +16,9 @@
                         <span class="icon icon-themeenergy_call"><i class="fa-solid fa-phone"></i></span>
                         <span>+385 95 526 1413</span>
                     </a>
-                    <a href="mailto:globus.transfers@gmail.com" class="contact-data space-x-1 transition hover:text-cyan-600">
+                    <a href="mailto:luka.predovan01@gmail.com" class="contact-data space-x-1 transition hover:text-cyan-600">
                         <span class="icon icon-themeenergy_mail-2"><i class="fa-solid fa-envelope"></i></span>
-                        <span>globus.transfers@gmail.com</span>
+                        <span>luka.predovan01@gmail.com</span>
                     </a>
                 </div>
                 <ul class="nav-list flex space-x-8 py-4">

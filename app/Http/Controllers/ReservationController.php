@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 
+use Carbon\Carbon;
+use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Srmklive\PayPal\Services\PayPal as PayPalClient;
-use Illuminate\Support\Arr;
 
 class ReservationController extends Controller
 {
@@ -27,7 +28,7 @@ class ReservationController extends Controller
             'passengers',
         ]) || !$request->input('vehicle')) {
             // Redirect back to the search page with an error message
-            return response()->json(['error' => 'Some data is missing. Please perform a new search.'], 400);
+            return view('errors.400');
         }
         // Retrieve data needed for the reservation form
         $departureLocationName = session('routeAndReservationData.departure');
@@ -45,7 +46,7 @@ class ReservationController extends Controller
         } elseif($vehicle === 'minibus'){
             $total_price = session('routeAndReservationData.minibusPrice');
         } else {
-            abort(500, 'Something went wrong!');
+            return view('errors.500');
         }
         
         $routeAndReservationData['vehicle'] = $vehicle;
@@ -82,7 +83,7 @@ class ReservationController extends Controller
             'vehicle'
         ])) {
             // Redirect back to the search page with an error message
-            return response()->json(['error' => 'Some data is missing. Please perform a new search and make a new reservation.'], 400);
+            return view('errors.400');
         }
 
         if(session('routeAndReservationData.vehicle') == 'standard'){
@@ -92,6 +93,8 @@ class ReservationController extends Controller
         } else {
             $passengers_rules = 'required|integer|between:1,19';
         }
+
+        $dayAfterTomorrow = Carbon::now()->addDays(2)->format('F-d-Y');
 
         // Validate reservation details
         $request->validate([
@@ -103,7 +106,7 @@ class ReservationController extends Controller
             'pick_up_address' => 'required|string|max:255',
             'destination_address' => 'required|string|max:255',
             'passengers' => $passengers_rules,
-            'departure-date' => 'required|date_format:"F-d-Y"|after_or_equal:tomorrow',
+            'departure-date' => 'required|date_format:"F-d-Y"|after_or_equal:' . $dayAfterTomorrow,
             'pickup-time' => 'required|date_format:H:i|',
             'payment_option' => 'required|in:direct-bank-transfer',
         ]);

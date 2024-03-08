@@ -11,10 +11,10 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="//unpkg.com/alpinejs" defer></script>
-    {{--
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css" /> --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     @if(request()->is('search') || request()->routeIs('destinations.show'))
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDig8jAYR_NW_T5DwHw2j5SWehUI91o-SI&callback=initMap"></script>
@@ -30,19 +30,46 @@
     <main id="main-content" class="text-gray-600">
         @yield('content')
     </main>
+    @include('components.footer')
+    @include('components.back-to-top')
 
     <script src="{{ asset('js/transitions.js') }}"></script>
 
     @if(request()->is('/') || request()->is('search') || Route::is('reservation.create') || request()->is('contact'))
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script>
     <script>
-        const tomorrow = new Date();
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        flatpickr('#datepicker', {  
-            allowInput: true, // prevent "readonly" prop
-            // dateFormat: 'Y-m-d',
-            dateFormat: 'F-d-Y',
-            minDate: tomorrow, // Disable past dates
-            // Additional configuration options can be added here
+        window.addEventListener("load", function(){
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {"background": "#1d1b1b"},
+                    "button": {"background": "#f8e71c"}
+                },
+                "content": {
+                    "message": "We use cookies to improve your experience. By continuing to use this site, you agree to our Cookie Policy",
+                    "dismiss": "I agree",
+                    "link": "Read more",
+                    "href": "{{ route('cookie.policy') }}" // Link to your cookie policy page
+                }
+            });
+        });
+    </script>
+    <script>
+        var today = new Date();
+        var twoDaysFromNow = new Date();
+        twoDaysFromNow.setDate(today.getDate() + 2);
+
+        var picker = new Pikaday({
+        field: document.getElementById('datepicker'),
+        minDate: twoDaysFromNow,
+        format: 'MMMM-DD-YYYY',
+        toString(date, format) {
+                // Using moment.js to format the date
+                return moment(date).format(format);
+            },
+            parse(dateString, format) {
+                // Using moment.js to parse the date
+                return moment(dateString, format).toDate();
+            }
         });
     </script>
     <script src="{{ asset('js/fetch.js') }}"></script>
