@@ -28,12 +28,9 @@ async function getDepartureSuggestions(query) {
 
         debounceTimer = setTimeout(async () => {
             // Make a request to get location suggestions from the server
-            let currentURL = window.location.href;
-            if (currentURL.includes("#top")) {
-                // Use replace and assign the modified value back to currentURL
-                currentURL = currentURL.replace("#top", "");
-            }
-            const response = await fetch(`${currentURL}api/departure-suggestions?query=${query}`);
+            let currentURL = window.location.origin;
+           
+            const response = await fetch(`${currentURL}/api/departure-suggestions?query=${query}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -44,7 +41,7 @@ async function getDepartureSuggestions(query) {
             data.forEach(locationName => {
                 const li = document.createElement('li');
                 li.textContent = locationName;
-                li.classList.add('bg-white', 'hover:bg-amber-400', 'px-6', 'py-1', 'bg-white', 'cursor-pointer');
+                li.classList.add('bg-white', 'hover:bg-cyan-600', 'hover:text-white', 'px-6', 'py-1', 'border', 'cursor-pointer');
                 li.addEventListener('click', function () {
                     selectSuggestionDeparture(locationName);
                 });
@@ -82,12 +79,9 @@ async function getDestinationSuggestions(queryDeparture, queryDestination) {
 
         debounceTimer = setTimeout(async () => {
             // Make a request to get destination suggestions from the server
-            let currentURL = window.location.href;
-            if (currentURL.includes("#top")) {
-                // Use replace and assign the modified value back to currentURL
-                currentURL = currentURL.replace("#top", "");
-            }
-            const response = await fetch(`${currentURL}api/destination-suggestions?queryDeparture=${queryDeparture}&queryDestination=${queryDestination}`);
+            let currentURL = window.location.origin;
+           
+            const response = await fetch(`${currentURL}/api/destination-suggestions?queryDeparture=${queryDeparture}&queryDestination=${queryDestination}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -98,7 +92,7 @@ async function getDestinationSuggestions(queryDeparture, queryDestination) {
             data.forEach(destinationName => {
                 const li = document.createElement('li');
                 li.textContent = destinationName;
-                li.classList.add('bg-white', 'hover:bg-amber-400', 'px-6', 'py-1', 'bg-white', 'cursor-pointer');
+                li.classList.add('bg-white', 'hover:bg-cyan-600', 'hover:text-white', 'px-6', 'py-1', 'border', 'cursor-pointer');
                 li.addEventListener('click', function () {
                     selectSuggestionDestination(destinationName);
                 });

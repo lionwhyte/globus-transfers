@@ -4,10 +4,8 @@ const backToTopButton = document.getElementById('back-to-top');
 function backToTop() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         backToTopButton.classList.remove('hidden');
-        console.log("visible")
     } else {
         backToTopButton.classList.add('hidden');
-        console.log("hidden")
     }
 };
 // When the user clicks on the button, scroll to the top of the document
@@ -42,15 +40,32 @@ document.getElementById('hamburger').addEventListener('click', function() {
 //SHOW MORE TAB
 function toggleDetails(button) {
     const content = button.nextElementSibling;
-    content.classList.toggle('hidden');
-
     const icons = button.querySelector('.toggle-icon').children;
-    icons[0].classList.toggle('hidden'); // Plus icon
-    icons[1].classList.toggle('hidden'); // Minus icon
 
-    const textSpan = button.querySelector('span:last-of-type');
-    textSpan.textContent = content.classList.contains('hidden') ? '(show more)' : '(show less)';
+    if (content.style.maxHeight){
+        content.style.maxHeight = null;
+        icons[0].classList.remove('hidden'); // Plus icon
+        icons[1].classList.add('hidden'); // Minus icon
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        icons[0].classList.add('hidden'); // Plus icon
+        icons[1].classList.remove('hidden'); // Minus icon
+    }    
 }
+
+// Add this function to update max-height on window resize
+function updateMaxHeights() {
+    const contents = document.querySelectorAll('.content');
+    contents.forEach(content => {
+        if (content.style.maxHeight) {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+// Call updateMaxHeights when the window is resized
+window.addEventListener('resize', updateMaxHeights);
+
+
 
 //ANIMATE HOMEPAGE ELEMENTS ON SCROLL
 const observerHero = new IntersectionObserver(entries => {

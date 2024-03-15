@@ -25,7 +25,7 @@ class ContactController extends Controller
             session('contactData.contact_phone') == $request->input('contact_phone') &&
             session('contactData.contact_message') == $request->input('contact_message')
         ) {
-            return response()->json(['error' => 'Message has already been sent.'], 400);
+            return view('contact', ['failed_message' => 'Your message has already been sent.']);
         }
         // Validate the input
         $request->validate([
@@ -47,6 +47,6 @@ class ContactController extends Controller
         // Send mail to the company
         Mail::to(env('MAIL_FROM_ADDRESS'))->send(new ContactMail($request));
         
-        return view('contact', ['message' => 'Your message has been sent. We will get back to you soon.']);
+        return view('contact', ['success_message' => 'Your message has been sent. We will get back to you soon.']);
     }
 }

@@ -12,35 +12,35 @@
                 </div>
                 <form action="/search" method="get" class="flex flex-col space-y-2 text-lg animate-left-hero" id="mapForm">
                     <div class="relative flex items-center">
-                        <i class="fa-solid fa-location-dot absolute left-2 text-xl"></i>
-                        <i class="fa-solid fa-xmark absolute right-3 text-xl px-1 cursor-pointer clear-input-button hidden" onclick="clearInput('departure')"></i>
+                        <i class="fa-solid fa-location-dot absolute left-2 text-2xl z-[60]"></i>
+                        <i class="fa-solid fa-xmark absolute right-3 text-2xl px-1 cursor-pointer clear-input-button hidden z-[60]" onclick="clearInput('departure')"></i>
                         <input required
-                            class="pl-9 pr-4 py-2 rounded w-full" 
+                            class="pl-10 pr-4 py-3 rounded w-full border z-50" 
                             type="text" id="departure" name="departure" autocomplete="off" placeholder="Pick-up location" oninput="getDepartureSuggestions(this.value)"> 
-                        <div id="departureSuggestions" class="absolute top-10 z-10 w-full max-h-60 overflow-y-scroll pt-2 bg-white border-2"
+                        <div id="departureSuggestions" class="absolute top-11 z-40 w-full max-h-60 overflow-y-scroll pt-2 bg-white border-2"
                             style="display: none;">
                             <ul id="departureSuggestionList"></ul>
                         </div>
                     </div>
                 
                     <div class="relative flex items-center">
-                        <i class="fa-solid fa-location-crosshairs absolute left-2 text-xl"></i>
-                        <i class="fa-solid fa-xmark absolute right-3 text-xl px-1 cursor-pointer clear-input-button hidden" onclick="clearInput('destination')"></i>
+                        <i class="fa-solid fa-location-crosshairs absolute left-2 text-2xl z-30"></i>
+                        <i class="fa-solid fa-xmark absolute right-3 text-2xl px-1 cursor-pointer clear-input-button hidden z-30" onclick="clearInput('destination')"></i>
                         <input required
-                            class="pl-9 pr-4 py-2 rounded w-full" 
+                            class="pl-10 pr-4 py-3 rounded w-full border z-20" 
                             type="text" id="destination" name="destination" autocomplete="off" placeholder="Destination" oninput="getDestinationSuggestions(departure.value, this.value)">
-                        <div id="destinationSuggestions" class="absolute top-10 z-10 w-full max-h-48 overflow-y-scroll pt-2 bg-white border-2" style="display: none;">
+                        <div id="destinationSuggestions" class="absolute top-11 z-10 w-full max-h-52 overflow-y-scroll pt-2 bg-white border-2" style="display: none;">
                             <ul id="destinationSuggestionList"></ul>
                         </div>
                     </div>
                     <div class="relative flex items-center">
-                        <i class="fa-regular fa-calendar-days absolute left-2 text-xl"></i>
-                        <input required autocomplete="off" type="text" id="datepicker" name="departure-date" class="pl-9 pr-4 py-2 rounded w-full" placeholder="Select a date">
+                        <i class="fa-regular fa-calendar-days absolute left-2 text-2xl"></i>
+                        <input required autocomplete="off" type="text" id="datepicker" name="departure-date" class="pl-10 pr-4 py-3 rounded w-full border" placeholder="Select a date">
                     </div>
                 
                     <div class="relative flex items-center">
-                        <i class="fas fa-user absolute left-2 text-xl"></i>
-                        <input class="pl-9 pr-4 py-2 rounded w-1/2 mr-2" type="number" name="passengers" id="passengers" placeholder="Passengers" required>
+                        <i class="fas fa-user absolute left-2 text-2xl"></i>
+                        <input class="pl-10 pr-4 py-3 rounded w-1/2 mr-2 border" type="number" name="passengers" id="passengers" placeholder="Passengers" required>
                         <div class="px-4 py-2 rounded bg-gray-200 w-1/2 space-x-1">
                             <input type="checkbox" name="round-trip" id="round-trip" class="scale-125">
                             <label for="round-trip">Round trip</label>
