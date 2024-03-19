@@ -20,7 +20,7 @@
         <div class="max-w-96 px-4 text-center animate-left-vehicles">
             <img src="{{asset('images/globus-minibus.png')}}" alt="Minibus Taxi Vehicle">
             <p class="font-semibold">MINIBUS</p>
-            <p>Max <strong>19</strong> passengers</p>
+            <p>Max <strong>16</strong> passengers</p>
         </div>
     </div>
 </section>
@@ -87,9 +87,7 @@
  <section class="py-16 mb-16 bg-gradient-to-r from-cyan-500 to-cyan-600 text-white">
     <div class="container px-6 md:px-4 lg:px-20 mx-auto lg:flex lg:justify-between">
         <h2 class="text-3xl font-semibold mb-6 lg:mb-0 animate-left-banner">Are you prepared for a voyage through Croatia?</h2>
-        <div class="flex items-center justify-center">
-            <a href="#top" class="bg-amber-500 text-2xl px-10 py-3 rounded-full hover:bg-amber-600 transition duration-300 text-center animate-right-banner">Book Now</a>
-        </div>
+        <a href="#top" class="bg-amber-500 text-2xl px-10 py-3 rounded-full hover:bg-amber-600 transition duration-300 text-center animate-right-banner" aria-label="Book Your Transfer Now">Book Now</a>
     </div>
 </section>
 

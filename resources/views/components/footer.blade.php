@@ -5,13 +5,13 @@
             <h2 class="text-xl font-semibold mb-4 text-sky-400">Need Help?</h2>
             <p>Contact us via phone or email:</p>
             <p>
-                <a href="tel:+385955261413" class="contact-data space-x-1 transition hover:text-cyan-600">
+                <a href="tel:+385955261413" class="contact-data space-x-1 transition hover:text-cyan-600" aria-label="Call Globus Transfers at +385 95 526 1413">
                     <span class="icon icon-themeenergy_call"><i class="fa-solid fa-phone"></i></span>
                     <span>+385 95 526 1413</span>
                 </a>
             </p>
             <p>
-                <a href="mailto:luka.predovan01@gmail.com" class="contact-data space-x-1 transition hover:text-cyan-600">
+                <a href="mailto:luka.predovan01@gmail.com" class="contact-data space-x-1 transition hover:text-cyan-600" aria-label="Email Globus Transfers at luka.predovan01@gmail.com">
                     <span class="icon icon-themeenergy_mail-2"><i class="fa-solid fa-envelope"></i></span>
                     <span>luka.predovan01@gmail.com</span>
                 </a>
@@ -23,19 +23,19 @@
             <p>Stay connected on social media:</p>
             <div class="flex space-x-4 mt-2">
                 <!-- Add your social media icons and links here -->
-                <a href="#" class="text-3xl  hover:text-white transition duration-300">
+                <a href="#" aria-label="Follow Globus Transfers on Facebook" class="text-3xl  hover:text-white transition duration-300">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="#" class="text-3xl  hover:text-white transition duration-300">
+                <a href="#" aria-label="Follow Globus Transfers on Instagram" class="text-3xl  hover:text-white transition duration-300">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
             <p class=" mt-4">Secure Payment:</p>
             <p>
-                <img class="w-12 inline" src="{{asset('images/american-express.jpg')}}" alt="american-express"> | 
-                <img class="w-12 inline" src="{{asset('images/visa.gif')}}" alt="visa"> | 
-                <img class="w-12 inline" src="{{asset('images/master-card.gif')}}" alt="master-card"> | 
-                <img class="w-12 inline" src="{{asset('images/maestro.gif')}}" alt="visa">
+                <img class="w-12 inline" src="{{asset('images/american-express.jpg')}}" alt="American Express"> | 
+                <img class="w-12 inline" src="{{asset('images/visa.gif')}}" alt="Visa"> | 
+                <img class="w-12 inline" src="{{asset('images/master-card.gif')}}" alt="Master Card"> | 
+                <img class="w-12 inline" src="{{asset('images/maestro.gif')}}" alt="Maestro">
             </p>
         </div>
         <!-- About Us -->

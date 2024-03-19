@@ -13,7 +13,9 @@
                 <form action="/search" method="get" class="flex flex-col space-y-2 text-lg animate-left-hero" id="mapForm">
                     <div class="relative flex items-center">
                         <i class="fa-solid fa-location-dot absolute left-2 text-2xl z-[60]"></i>
-                        <i class="fa-solid fa-xmark absolute right-3 text-2xl px-1 cursor-pointer clear-input-button hidden z-[60]" onclick="clearInput('departure')"></i>
+                        <button type="button" aria-label="Clear input" class="absolute right-3 text-2xl px-1 cursor-pointer clear-input-button hidden z-[60]" onclick="clearInput('departure')">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                         <input required
                             class="pl-10 pr-4 py-3 rounded w-full border z-50" 
                             type="text" id="departure" name="departure" autocomplete="off" placeholder="Pick-up location" oninput="getDepartureSuggestions(this.value)"> 
@@ -25,7 +27,9 @@
                 
                     <div class="relative flex items-center">
                         <i class="fa-solid fa-location-crosshairs absolute left-2 text-2xl z-30"></i>
-                        <i class="fa-solid fa-xmark absolute right-3 text-2xl px-1 cursor-pointer clear-input-button hidden z-30" onclick="clearInput('destination')"></i>
+                        <button type="button" aria-label="Clear input" class="absolute right-3 text-2xl px-1 cursor-pointer clear-input-button hidden z-30" onclick="clearInput('destination')"> 
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                         <input required
                             class="pl-10 pr-4 py-3 rounded w-full border z-20" 
                             type="text" id="destination" name="destination" autocomplete="off" placeholder="Destination" oninput="getDestinationSuggestions(departure.value, this.value)">

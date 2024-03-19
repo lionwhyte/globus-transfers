@@ -24,20 +24,25 @@ $images = explode(",",$location->location_images);
         {!! $location->location_description !!}
     </article>
     <div class="w-full mx-auto">
-        <div class="w-full rounded h-80" id="map"></div>
-        <table class="w-full border my-20">
-            <tr class="border bg-gray-100">
-                <th class="py-4">Destinations</th>
-                <th class="py-4">Oneway</th>
-                <th class="py-4">Return</th>
-            </tr>
-            @foreach ($routes as $route)
+        <div class="w-full rounded h-80" id="map" aria-label="Location Map" role="application"></div>
+        <table class="w-full border my-20" aria-describedby="table-summary">
+            <caption id="table-summary" class="mb-2">List of Destinations and Prices for One-way and Return Transfers</caption>
+            <thead>
+                <tr class="border bg-gray-100">
+                    <th scope="col" class="py-4">Destinations</th>
+                    <th scope="col" class="py-4">Oneway</th>
+                    <th scope="col" class="py-4">Return</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($routes as $route)
                 <tr class="text-center border transition hover:text-white hover:bg-cyan-600">
                     <td class="py-2">{{ explode(",", $route->destination_location_name)[0] }}</td>
                     <td class="py-2">{{ $route->standardPrice }}€</td>
                     <td class="py-2">{{ $route->standardPrice + ($route->standardPrice - ($route->standardPrice * 0.2)) }}€</td>
                 </tr>
-            @endforeach
+                @endforeach
+            </tbody>  
         </table>
         <div class="border rounded">
             @include('partials.contact-aside')
@@ -45,24 +50,6 @@ $images = explode(",",$location->location_images);
         
     </div>
 </section>
-
-{{-- <section class="container px-6 md:px-4 lg:px-20 mx-auto mt-24">
-    <table class="w-1/2 border">
-        <tr class="border bg-gray-100">
-            <th class="py-4">Destinations</th>
-            <th class="py-4">Oneway</th>
-            <th class="py-4">Return</th>
-        </tr>
-        @foreach ($routes as $route)
-            <tr class="text-center border font-semibold">
-                <td class="py-2">{{ $route->destination_location_name }}</td>
-                <td class="py-2">{{ $route->standardPrice }}€</td>
-                <td class="py-2">{{ $route->standardPrice + ($route->standardPrice - ($route->standardPrice * 0.2)) }}€</td>
-            </tr>
-        @endforeach
-    </table>
-</section> --}}
-
 
 <script>
     function initMap() {

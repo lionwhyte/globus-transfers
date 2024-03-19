@@ -26,7 +26,7 @@ class RouteController extends Controller
             'departure' => 'required',
             'destination' => 'required',
             'departure-date' => 'required|date_format:"F-d-Y"|after_or_equal:' . $dayAfterTomorrow,
-            'passengers' => 'required|integer|min:1|max:19',
+            'passengers' => 'required|integer|min:1|max:16',
         ]);
         
         if ($validator->fails()) {

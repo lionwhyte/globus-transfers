@@ -22,7 +22,7 @@
     <div class="col-span-5">
         <section class="pt-16 pb-8">
             <p class="mb-10">We, <span class="font-bold">GLOBUS Transfers</span>, specialize in passenger transportation and on-demand passenger transfers. Our operations cover the regions of Dalmatia, Zadar, and Zagreb. Additionally, we offer vehicle rentals.</p>
-            <img src="{{asset('images/globus-transfers-1.jpg.webp')}}" alt="globus-transfers-1" class="w-full rounded">
+            <img src="{{asset('images/globus-transfers-1.jpg.webp')}}" alt="" class="w-full rounded">
         </section>
         
         <section class="py-8">
@@ -43,7 +43,7 @@
         
         <section class="py-8">
             <h2 class="text-cyan-700 text-xl font-bold mb-4">Fast and Secure Transfers in Zadar</h2>
-            <img src="{{asset('images/globus-transfers-3.jpg.webp')}}" alt="globus-transfers-1" class="w-full md:w-1/2 rounded mb-4">
+            <img src="{{asset('images/globus-transfers-3.jpg.webp')}}" alt="" class="w-full md:w-1/2 rounded mb-4">
             <p class="mb-4"><span class="font-bold">Passenger transfers</span> involve transporting individuals from point A to B, typically from airports, ferry ports, or bus terminals. Our services also include luggage transportation for your convenience.</p>
             <p class="mb-4">For quality and secure <span class="font-bold">passenger transfers in Zadar</span>, choose <span class="font-bold">GLOBUS</span>. Contact us to experience our professionalism and affordable rates. Trust us for a pleasant journey!</p>
             <p class="mb-4">When you need <span class="font-bold">passenger transfers in Zadar</span>, rely on <span class="font-bold">GLOBUS</span> for a prompt and safe transportation service.</p>

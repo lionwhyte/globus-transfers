@@ -29,7 +29,7 @@
         <div class="col-span-6 pr-10">
             <div class="space-y-4">
                 <p>
-                    <label for="billing_first_name" class="">First Name<abbr class="required text-red-500"
+                    <label for="billing_first_name">First Name<abbr class="required text-red-500"
                             title="Required">*</abbr></label><br><input type="text"
                         class="input-text w-full border-2 p-2 rounded" name="first_name" id="billing_first_name"
                         value="{{old('first_name')}}" autocomplete="given-name">
@@ -39,7 +39,7 @@
                 @enderror
 
                 <p>
-                    <label for="billing_last_name" class="">Last Name<abbr class="required text-red-500"
+                    <label for="billing_last_name">Last Name<abbr class="required text-red-500"
                             title="Required">*</abbr></label><br><input type="text"
                         class="input-text w-full border-2 p-2 roundedborder-2 p-2 rounded" name="last_name"
                         id="billing_last_name" value="{{old('last_name')}}" autocomplete="family-name">
@@ -49,7 +49,7 @@
                 @enderror
 
                 <p id="billing_email_field">
-                    <label for="billing_email" class="">Email<abbr class="required text-red-500"
+                    <label for="billing_email">Email<abbr class="required text-red-500"
                             title="Required">*</abbr></label><br><input type="text"
                         class="input-text w-full border-2 p-2 rounded" name="email" id="billing_email" placeholder=""
                         value="{{old('email')}}" autocomplete="email username">
@@ -59,7 +59,7 @@
                 @enderror
 
                 <p>
-                    <label for="confirmation_email" class="">Email Confirmation<abbr class="required text-red-500"
+                    <label for="email_confirmation">Email Confirmation<abbr class="required text-red-500"
                             title="Required">*</abbr></label><br><input type="text"
                         class="input-text w-full border-2 p-2 rounded" name="email_confirmation" id="email_confirmation"
                         placeholder="" value="{{old('email_confirmation')}}" autocomplete="email username">
@@ -69,7 +69,7 @@
                 @enderror
 
                 <p id="billing_phone_field">
-                    <label for="billing_phone" class="">Phone Number (Including country code)<abbr
+                    <label for="billing_phone">Phone Number (Including country code)<abbr
                             class="required text-red-500" title="Required">*</abbr></label><br><input type="tel"
                         class="input-text w-full border-2 p-2 rounded" name="phone" id="billing_phone" placeholder=""
                         value="{{old('phone')}}" autocomplete="tel">
@@ -79,12 +79,12 @@
                 @enderror
 
                 <p>
-                    <label for="passengers2" class="">Passengers @if ($vehicle == 'standard')
+                    <label for="passengers2">Passengers @if ($vehicle == 'standard')
                         (Max:3)
                         @elseif($vehicle == 'minivan')
                         (Max:8)
                         @elseif($vehicle == 'minibus')
-                        (Max:19)
+                        (Max:16)
                         @endif
                         <abbr class="required text-red-500" title="Required">*</abbr></label><br><input type="number"
                         class="w-full border-2 p-2 rounded" name="passengers" id="passengers2" placeholder=""
@@ -97,28 +97,28 @@
                 <h2 class="text-2xl">EXTRAS</h2>
 
                 <p>
-                    <label for="infant_seat" class="">Infant Seat (0-1 YEAR)</label><br>
+                    <label for="infant_seat">Infant Seat (0-1 YEAR)</label><br>
                     <input type="number"
                         class="w-full border-2 p-2 rounded" name="infant_seat" id="infant_seat"
                         value="{{old('infant_seat')}}">
                 </p>
 
                 <p>
-                    <label for="child_seat" class="">Child Seat (1-5 YEAR)</label><br>
+                    <label for="child_seat">Child Seat (1-5 YEAR)</label><br>
                     <input type="number"
                         class="w-full border-2 p-2 rounded" name="child_seat" id="child_seat"
                         value="{{old('child_seat')}}">
                 </p>
 
                 <p>
-                    <label for="booster_seat" class="">Booster Seat (5-12 YEAR)</label><br>
+                    <label for="booster_seat">Booster Seat (5-12 YEAR)</label><br>
                     <input type="number"
                         class="w-full border-2 p-2 rounded" name="booster_seat" id="booster_seat"
                         value="{{old('booster_seat')}}">
                 </p>
 
                 <p>
-                    <label for="luggage" class="">Luggage (number of bags)</label><br>
+                    <label for="luggage">Luggage (number of bags)</label><br>
                     <input type="number"
                         class="w-full border-2 p-2 rounded" name="luggage" id="luggage" value="{{old('luggage')}}">
                 </p>
@@ -129,7 +129,7 @@
                 <h2 class="text-2xl">TRANSFER DETAILS</h2>
 
                 <p>
-                    <label for="date" class="">Pick-up Date
+                    <label for="date">Pick-up Date
                         <abbr class="required text-red-500" title="Required">*</abbr></label><br><input type="text"
                         class="w-full border-2 p-2 rounded" name="departure-date" id="date"
                         value="{{ $departureDate }}" readonly>
@@ -139,7 +139,7 @@
                 @enderror
 
                 <p>
-                    <label for="pickup-time" class="">Pick-up Time
+                    <label for="pickup-time">Pick-up Time
                         <abbr class="required text-red-500" title="Required">*</abbr></label><br><input type="time"
                         class="w-full border-2 p-2 rounded" name="pickup-time" id="pickup-time"
                         value="{{old('pickup-time')}}">
@@ -149,7 +149,7 @@
                 @enderror
 
                 <p>
-                    <label for="billing_address_1" class="">Pick-up Address<abbr class="required text-red-500"
+                    <label for="billing_address_1">Pick-up Address<abbr class="required text-red-500"
                             title="Required">*</abbr></label><br><input type="text"
                         class="input-text w-full border-2 p-2 rounded" name="pick_up_address" id="billing_address_1"
                         value="{{old('pick_up_address')}}">
@@ -172,7 +172,7 @@
                         class="input-text w-full border-2 p-2 rounded" name="flight_number" id="flight_number"
                         value="{{old('flight_number')}}"></p>
 
-                <p><label for="order_comments" class="">Message<span
+                <p><label for="order_comments">Message<span
                             class="optional">(optional)</span></label><br><textarea name="order_comments"
                         class="input-text w-full border-2 p-2 rounded" id="order_comments" rows="5" cols="50">{{old('order_comments')}}
                 </textarea></p>
@@ -197,7 +197,6 @@
                             <span class="text-lg mr-2 mt-1">TOTAL</span>
                             <span class="text-3xl">{{ $total_price }} €</span>
                         </p>
-                        {{-- <p class="text-xs mt-2">VAT included</p> --}}
                     </div>
 
 

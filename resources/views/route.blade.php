@@ -78,7 +78,7 @@
             </div>
             <div class="col-span-2 sm:col-span-1 sm:border-r border-b sm:border-b-0 pb-8 sm:pb-0 px-2 h-full flex flex-col justify-center">
                 <p class="font-semibold">MINIBUS</p>
-                <p>Max 19 passengers</p>
+                <p>Max 16 passengers</p>
             </div>
             <div class="col-span-1 border-r px-2 h-full flex flex-col justify-center">
                 <p class="col-span-1"><i class="fa-regular fa-map text-4xl"></i><br>{{ $distance }} km</p>
@@ -93,7 +93,7 @@
                 @else
                 <p>Oneway trip</p>
                 @endif
-                <a href="{{ route('reservation.create') }}?vehicle=minivan" 
+                <a href="{{ route('reservation.create') }}?vehicle=minibus" 
                     class="w-full inline-block p-4 rounded bg-amber-500 transition hover:bg-amber-600 text-white mt-4">SELECT</a>
                 @else
                 <p>Failed to calculate distance and time.</p>
@@ -110,7 +110,7 @@
     </div>
     <div class="h-80 w-full md:h-96">
         <h2 class="text-xl font-semibold mb-4">Map</h2>
-        <div class="w-full h-full" id="map"></div>
+        <div class="w-full h-full" id="map" aria-label="Map showing route from {{ $departureLocationName }} to {{ $destinationLocationName }}"></div>
     </div>
 </section>
 

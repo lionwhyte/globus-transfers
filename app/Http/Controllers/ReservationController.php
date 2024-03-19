@@ -44,7 +44,8 @@ class ReservationController extends Controller
         } elseif($vehicle === 'minivan'){
             $total_price = session('routeAndReservationData.minivanPrice');
         } elseif($vehicle === 'minibus'){
-            $total_price = session('routeAndReservationData.minibusPrice');
+            return redirect('contact');
+            // $total_price = session('routeAndReservationData.minibusPrice');
         } else {
             return view('errors.500');
         }
@@ -91,7 +92,7 @@ class ReservationController extends Controller
         } elseif(session('routeAndReservationData.vehicle') == 'minivan'){
             $passengers_rules = 'required|integer|between:1,8';
         } else {
-            $passengers_rules = 'required|integer|between:1,19';
+            $passengers_rules = 'required|integer|between:1,16';
         }
 
         $dayAfterTomorrow = Carbon::now()->addDays(2)->format('F-d-Y');

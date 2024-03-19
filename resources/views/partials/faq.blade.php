@@ -1,12 +1,12 @@
 <ul class="space-y-2">
     <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
-        <button class="toggle text-start w-full flex justify-between w-full flex justify-between" onclick="toggleDetails(this)">
+        <button type="button" class="toggle text-start w-full flex justify-between w-full flex justify-between" onclick="toggleDetails(this)">
             <span class="text-cyan-700 hover:text-cyan-500 text-lg font-semibold">
                 What happens in the case of a delay?
             </span>
             <span class="toggle-icon text-2xl">
-                <i class="fas fa-plus"></i>
-                <i class="fas fa-minus hidden"></i>
+                <i aria-hidden="true" class="fas fa-plus"></i>
+                <i aria-hidden="true" class="fas fa-minus hidden"></i>
             </span>
         </button>
         <div class="content">
@@ -16,13 +16,13 @@
         </div>
     </li>
     <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
-        <button class="toggle text-start w-full flex justify-between" onclick="toggleDetails(this)">
+        <button type="button" class="toggle text-start w-full flex justify-between" onclick="toggleDetails(this)">
             <span class="text-cyan-700 hover:text-cyan-500 text-lg font-semibold">
                 Why is using a private transfer a good service?
             </span>
             <span class="toggle-icon text-2xl">
-                <i class="fas fa-plus"></i>
-                <i class="fas fa-minus hidden"></i>
+                <i aria-hidden="true" class="fas fa-plus"></i>
+                <i aria-hidden="true" class="fas fa-minus hidden"></i>
             </span>
         </button>
         <div class="content">
@@ -31,13 +31,13 @@
         </div>
     </li>
     <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
-        <button class="toggle text-start w-full flex justify-between" onclick="toggleDetails(this)">
+        <button type="button" class="toggle text-start w-full flex justify-between" onclick="toggleDetails(this)">
             <span class="text-cyan-700 hover:text-cyan-500 text-lg font-semibold">
                 Where will the driver wait at the airport?
             </span>
             <span class="toggle-icon text-2xl">
-                <i class="fas fa-plus"></i>
-                <i class="fas fa-minus hidden"></i>
+                <i aria-hidden="true" class="fas fa-plus"></i>
+                <i aria-hidden="true" class="fas fa-minus hidden"></i>
             </span>
         </button>
         <div class="content">
@@ -46,13 +46,13 @@
         </div>
     </li>
     <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
-        <button class="toggle text-start w-full flex justify-between" onclick="toggleDetails(this)">
+        <button type="button" class="toggle text-start w-full flex justify-between" onclick="toggleDetails(this)">
             <span class="text-cyan-700 hover:text-cyan-500 text-lg font-semibold">
                 What does the price include?
             </span>
             <span class="toggle-icon text-2xl">
-                <i class="fas fa-plus"></i>
-                <i class="fas fa-minus hidden"></i>
+                <i aria-hidden="true" class="fas fa-plus"></i>
+                <i aria-hidden="true" class="fas fa-minus hidden"></i>
             </span>
         </button>
         <div class="content">
@@ -61,13 +61,13 @@
         </div>
     </li>
     <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
-        <button class="toggle text-start w-full flex justify-between" onclick="toggleDetails(this)">
+        <button type="button" class="toggle text-start w-full flex justify-between" onclick="toggleDetails(this)">
             <span class="text-cyan-700 hover:text-cyan-500 text-lg font-semibold">
                 What vehicles are available?
             </span>
             <span class="toggle-icon text-2xl">
-                <i class="fas fa-plus"></i>
-                <i class="fas fa-minus hidden"></i>
+                <i aria-hidden="true" class="fas fa-plus"></i>
+                <i aria-hidden="true" class="fas fa-minus hidden"></i>
             </span>
         </button>
         <div class="content">
@@ -77,13 +77,13 @@
         </div>
     </li>
     <li class="p-4 rounded bg-gray-100 border-solid border-2 border-amber-500">
-        <button class="toggle text-start w-full flex justify-between" onclick="toggleDetails(this)">
+        <button type="button" class="toggle text-start w-full flex justify-between" onclick="toggleDetails(this)">
             <span class="text-cyan-700 hover:text-cyan-500 text-lg font-semibold">
                 Can I cancel my reservation?
             </span>
             <span class="toggle-icon text-2xl">
-                <i class="fas fa-plus"></i>
-                <i class="fas fa-minus hidden"></i>
+                <i aria-hidden="true" class="fas fa-plus"></i>
+                <i aria-hidden="true" class="fas fa-minus hidden"></i>
             </span>
         </button>
         <div class="content">
