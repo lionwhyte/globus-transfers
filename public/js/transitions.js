@@ -18,22 +18,47 @@ backToTopButton.addEventListener('click', function() {
 
 //ON SCROLL FUNCTIONS
 window.onscroll = function() {
+    elementsFixedOnScroll();
     backToTop();
 };
+
+//LOGO SECTION STICK ON TOP WHEN SCROLL DOWN
+function elementsFixedOnScroll() {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+       document.getElementById("header-section").classList.remove("container");
+       document.getElementById("header-section").classList.remove("relative");
+       document.getElementById("header-section").classList.add("fixed");
+       document.getElementById("header-section").classList.add("top-0");
+       document.getElementById("header-section").classList.add("w-full");
+       document.getElementById("header-section").classList.add("border-b");
+       document.getElementById("header-section").classList.add("border-black");
+       document.getElementById("header-section").classList.add("shadow-xl");
+       document.getElementById("top-contact-info-section").classList.add("hidden");
+    } else {
+       document.getElementById("header-section").classList.add("container");
+       document.getElementById("header-section").classList.add("relative");
+       document.getElementById("header-section").classList.remove("border-b-0");
+       document.getElementById("header-section").classList.remove("fixed");
+       document.getElementById("header-section").classList.remove("top-0");
+       document.getElementById("header-section").classList.remove("w-full");
+       document.getElementById("header-section").classList.remove("border-b");
+       document.getElementById("header-section").classList.remove("border-black");
+       document.getElementById("header-section").classList.remove("shadow-xl");
+       document.getElementById("top-contact-info-section").classList.remove("hidden");
+    }
+}
 
 //MOBILE NAV
 document.getElementById('hamburger').addEventListener('click', function() {
     const nav = document.getElementById('mobile-nav');
     if (nav.clientHeight === 0) {
         // Open the nav element
-        nav.style.height = `${nav.scrollHeight}px`;
-        nav.style.marginTop = '2rem';
-        nav.style.transition = 'height 500ms, margin-top 1000ms';
+        nav.style.height = `${nav.scrollHeight + 10}px`;
+        nav.style.transition = 'height 500ms';
     } else {
         // Close the nav element
         nav.style.height = '0';
-        nav.style.marginTop = '0';
-        nav.style.transition = 'height 500ms, margin-top 1000ms ';
+        nav.style.transition = 'height 500ms ';
     }
 });
 

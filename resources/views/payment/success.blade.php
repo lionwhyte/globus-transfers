@@ -10,8 +10,7 @@
 <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="bg-white p-6 rounded-md shadow-md text-center text-gray-500">
         <div class="mb-8">
-            <img src="{{asset('images/globus_test_logo.jpg')}}" class="logo w-24 md:w-32 mx-auto" alt="Globus Transfers Logo">
-            <p class="mt-[-1rem] font-semibold text-gray-600"><span class="lg:text-2xl">GLOBUS </span><span>Transfers</span></p>
+            <img src="{{asset('images/globus-transfers-logo.jpg')}}" class="logo w-80 mx-auto" alt="Globus Transfers Logo">
         </div>
         <h1 class="text-3xl font-semibold text-teal-700 mb-4">Thank you for your order!</h1>
         <p class="mb-4">

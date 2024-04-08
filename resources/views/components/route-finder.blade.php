@@ -4,7 +4,9 @@
         <div class="flex flex-col xl:flex-row xl:mx-auto space-y-2 xl:space-y-0 xl:space-x-8">
             <div class="relative flex flex-col w-full">
                 <i class="fa-solid fa-location-dot absolute left-2 top-3 text-2xl z-[60]"></i>
-                <i class="fa-solid fa-xmark absolute right-3 top-3 text-2xl z-[60] px-1 cursor-pointer clear-input-button" onclick="clearInput('departure')"></i>
+                <button type="button" aria-label="Clear input" class="absolute right-3 top-3 text-2xl z-[60] px-1 cursor-pointer clear-input-button" onclick="clearInput('departure')"> 
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
                 <input required
                     class="pl-10 pr-4 py-3 rounded w-full xl:w-80 z-50 border" 
                     type="text" id="departure" name="departure" autocomplete="off" placeholder="Pick-up location" 
@@ -17,7 +19,9 @@
             
             <div class="relative flex flex-col w-full">
                 <i class="fa-solid fa-location-crosshairs absolute left-2 top-3 text-2xl z-30"></i>
-                <i class="fa-solid fa-xmark absolute right-3 top-3 text-2xl px-1 cursor-pointer clear-input-button z-30" onclick="clearInput('destination')"></i>
+                <button type="button" aria-label="Clear input" class="absolute right-3 top-3 text-2xl z-[60] px-1 cursor-pointer clear-input-button" onclick="clearInput('destination')"> 
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
                 <input required
                     class="pl-10 pr-4 py-3 rounded w-full xl:w-80 z-20 border" 
                     type="text" id="destination" name="destination" autocomplete="off" placeholder="Destination" 

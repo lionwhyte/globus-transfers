@@ -40,7 +40,7 @@
 </head>
 <body>
     <header>
-        <img src="https://www.freeiconspng.com/uploads/globe-png-22.png" alt="Logo" width="80">
+        <img src="{{ public_path('images/globus-transfers-logo.jpg') }}" alt="Logo" width="250">
         <h1>GLOBUS Transfers</h1>
     </header>
     <br>
@@ -169,7 +169,7 @@
     <br>
     <br>
     <footer>
-        <img src="https://www.freeiconspng.com/uploads/globe-png-22.png" alt="Logo" width="80">
+        <img src="{{ public_path('images/globus-transfers-logo.jpg') }}" alt="Logo" width="250">
         <p><strong>Globus<br> Ulica dr. Franje Tuđmana 85, Vrsi</strong></p>
     </footer>
 </body>

@@ -25,10 +25,10 @@
     <div style="height: 96%; width: 100%">
         <header>
             <div>
-                <img src="{{ public_path('images/dummy_logo.png') }}" alt="Logo" width="80">
+                <img src="{{ public_path('images/globus-transfers-logo.jpg') }}" alt="Logo" width="250">
                 <br>
                 <br>
-                <p><strong>GLOBUS Transfers d.o.o</strong></p>
+                <p><strong>GLOBUS Transfers</strong></p>
                 <p>Ulica dr. Franje Tuđmana 85 23235 Vrsi Hrvatska</p>
                 <p>OIB: 98595920</p>
                 <table style="margin: -5;">
@@ -73,6 +73,8 @@
                 </table>
             </div>
         </header>
+        <br>
+        <br>
         <br>
         <br>
         <section>
