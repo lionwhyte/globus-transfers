@@ -1,5 +1,12 @@
 @extends('layout')
 
+
+@section('meta')
+<meta name="description" 
+    content="Our cookie policy outlines how we use cookies and similar technologies on our website to enhance your browsing experience. Cookies are small text files stored on your device that help us understand how you interact with our site, personalize content, analyze traffic, and provide relevant advertisements.">
+<title>Cookie policy | Globus Transfers Croatia</title>
+@endsection
+
 @php
 $breadcrumbs = [
 ['title' => 'HOME', 'url' => '/'],

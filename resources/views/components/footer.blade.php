@@ -52,9 +52,9 @@
     <div class="container px-6 md:px-4 lg:px-20 mx-auto text-center mt-8 px-4 xl:flex xl:justify-between">
         <p>&copy; 2024 Globus Transfers Croatia. All rights reserved.</p>
         <div>
-            <a class="transition hover:text-cyan-600" href="cookie-policy">Cookie Policy</a> | 
-            <a class="transition hover:text-cyan-600" href="terms-and-conditions">Terms and conditions</a> | 
-            <a class="transition hover:text-cyan-600" href="privacy-policy">Privacy Policy</a>
+            <a class="transition hover:text-cyan-600" href="/cookie-policy">Cookie Policy</a> | 
+            <a class="transition hover:text-cyan-600" href="/terms-and-conditions">Terms and conditions</a> | 
+            <a class="transition hover:text-cyan-600" href="/privacy-policy">Privacy Policy</a>
         </div>
     </div>
 </footer>

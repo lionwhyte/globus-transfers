@@ -17,9 +17,9 @@
     {{-- <script src="https://cdn.jsdelivr.net/npm/moment"></script> --}}
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     @if(request()->is('search') || request()->routeIs('destinations.show'))
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDig8jAYR_NW_T5DwHw2j5SWehUI91o-SI&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqRlLaoJ3wLxYVElQwCQCqFelRvievnO8&callback=initMap"></script>
     @endif
-    <title>GLOBUS TRANSFERS | Passenger Shuttle Transportation Services in Croatia</title>
+    @yield('meta')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 

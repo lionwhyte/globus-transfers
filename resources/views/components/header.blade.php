@@ -1,5 +1,5 @@
 <header class="text-gray-600 taxi-squares-border" id="top">
-    <div class="mx-auto container pb-4 px-6 md:px-4 lg:px-20 flex justify-between bg-white relative z-50" id="header-section">
+    <div class="mx-auto container pb-4 px-6 md:px-4 lg:px-20 flex justify-between bg-white relative z-[100]" id="header-section">
         <div class="logo flex items-center">
             <a href="/" aria-label="Globus Transfers Homepage">
                 <div>
@@ -69,7 +69,7 @@
         </nav>
 
         {{-- Mobile nav --}}
-        <nav class="w-full px-2 bg-white md:hidden h-0 overflow-hidden absolute left-0 top-[89px] z-50 shadow-xl" id="mobile-nav">
+        <nav class="w-full px-2 bg-white md:hidden h-0 overflow-hidden absolute left-0 top-[89px] shadow-xl" id="mobile-nav">
             <ul class="text-white mt-2">
                 <li>
                     <a href="/"

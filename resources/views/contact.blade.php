@@ -1,5 +1,12 @@
 @extends('layout')
 
+
+@section('meta')
+<meta name="description" content="Discover reliable passenger transport services in Croatia and neighboring countries with Globus Shuttle Transfers. Contact us today for seamless shuttle transfers and professional transportation solutions across the region. Schedule your journey with our trusted network of drivers and vehicles.">
+<title>Contact us | Globus Transfers Croatia</title>
+@endsection
+
+
 @php
     $breadcrumbs = [
     ['title' => 'HOME', 'url' => '/'],

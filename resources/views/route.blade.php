@@ -1,8 +1,14 @@
 @extends('layout')
+
+@section('meta')
+<meta name="description" 
+    content="Octopus Transfers Croatia links travelers throughout Croatia and nearby nations using our extensive network of skilled drivers and vehicles.">
+<title>Search | Globus Transfers Croatia</title>
+@endsection
+
 @section('content')
 
 @include('components.route-finder')
-
 
 <section class="container px-6 md:px-4 lg:px-20 mx-auto text-gray-600">
     <h2 class="mt-10 mb-16 text-2xl">Select transfer type for your trip from {{ $departureLocationName }} to {{ $destinationLocationName }}</h2>

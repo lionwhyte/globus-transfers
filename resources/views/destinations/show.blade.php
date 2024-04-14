@@ -1,5 +1,32 @@
 @extends('layout')
 
+<?php
+// Assuming $location->location_description contains the HTML content
+$htmlContent = $location->location_description;
+
+// Create a DOMDocument instance to parse the HTML
+$dom = new DOMDocument();
+$dom->loadHTML($htmlContent);
+
+// Get all <p> (paragraph) elements from the parsed HTML
+$paragraphs = $dom->getElementsByTagName('p');
+
+// Check if there are paragraphs present
+if ($paragraphs->length > 0) {
+    // Get the last paragraph (index is zero-based)
+    $lastParagraph = $paragraphs->item($paragraphs->length - 1)->nodeValue;
+
+} else {
+    // No paragraphs found
+    echo 'No paragraphs found in the HTML content.';
+}
+?>
+
+@section('meta')
+<meta name="description" content="{{ $lastParagraph }}">
+<title>{{ $location->location_name }} | Globus Transfers Croatia | Destinations</title>
+@endsection
+
 @php
     $breadcrumbs = [
     ['title' => 'HOME', 'url' => '/'],
@@ -8,6 +35,9 @@
 ];
 $images = explode(",",$location->location_images);
 @endphp
+
+
+
 @section('content')
 
 <section class="bg-cyan-700 text-white">
@@ -21,7 +51,7 @@ $images = explode(",",$location->location_images);
 </section>
 <section class="container px-6 md:px-4 lg:px-20 mx-auto grid lg:grid-cols-2 gap-16 mt-16">
     <article class="space-y-4">
-        {!! $location->location_description !!}
+        {!! $htmlContent !!}
     </article>
     <div class="w-full mx-auto">
         <div class="w-full rounded h-80" id="map" aria-label="Location Map" role="application"></div>

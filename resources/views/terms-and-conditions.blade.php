@@ -1,5 +1,11 @@
 @extends('layout')
 
+@section('meta')
+<meta name="description" content=" Terms of Business - 
+    Globus transfers company (Globus Transfers) made the following terms and conditions defining the rights and the obligations between the company Globus transfers company and users of transportation services provided by the company Globus transfers company. ">
+<title>Terms and conditions| Globus Transfers Croatia</title>
+@endsection
+
 @php
     $breadcrumbs = [
     ['title' => 'HOME', 'url' => '/'],

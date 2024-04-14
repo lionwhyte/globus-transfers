@@ -1,6 +1,13 @@
 @extends('layout')
-@section('content')
 
+@section('meta')
+<meta name="description" content="Learn more about Globus Shuttle Transfers, your trusted partner for passenger transport services in Croatia and neighboring countries. 
+    Discover our commitment to providing safe, reliable, and comfortable shuttle transfers. 
+    With a focus on customer satisfaction and excellence, we ensure a seamless travel experience for every journey.">
+<title>About us | Globus Transfers Croatia</title>
+@endsection
+
+@section('content')
 @php
     $breadcrumbs = [
     ['title' => 'HOME', 'url' => '/'],

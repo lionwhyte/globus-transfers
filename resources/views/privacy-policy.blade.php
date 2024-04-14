@@ -1,4 +1,11 @@
 @extends('layout')
+
+@section('meta')
+<meta name="description" 
+    content="We are very delighted that you have shown interest in our enterprise. Data protection is of a particularly high priority for the management of Globus.">
+<title>Privacy policy | Globus Transfers Croatia</title>
+@endsection
+
 @section('content')
 
 @php
