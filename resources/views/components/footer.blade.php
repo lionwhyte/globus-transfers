@@ -23,10 +23,10 @@
             <p>Stay connected on social media:</p>
             <div class="flex space-x-4 mt-2">
                 <!-- Add your social media icons and links here -->
-                <a href="#" aria-label="Follow Globus Transfers on Facebook" class="text-3xl  hover:text-white transition duration-300">
+                <a href="https://www.facebook.com/profile.php?id=61557956495347" aria-label="Follow Globus Transfers on Facebook" class="text-3xl  hover:text-white transition duration-300">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="#" aria-label="Follow Globus Transfers on Instagram" class="text-3xl  hover:text-white transition duration-300">
+                <a href="https://www.instagram.com/globustransferscroatia/" aria-label="Follow Globus Transfers on Instagram" class="text-3xl  hover:text-white transition duration-300">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>

@@ -131,7 +131,7 @@
                     <a href="#">
                         <img src="{{asset('images/tripadvisor_logo.svg')}}" alt="tripAdvisor Logo" class="max-w-44 mx-auto">
                     </a>
-                    <a href="#" class="inline-block p-2 bg-amber-500 text-white transition hover:bg-amber-600 rounded">REVIEW US</a>
+                    <a href="https://www.tripadvisor.com/UserReviewEdit-g1190833-d27700791-Globus_Transfers-Vrsi_Zadar_County_Dalmatia.html" class="inline-block p-2 bg-amber-500 text-white transition hover:bg-amber-600 rounded">REVIEW US</a>
                 </div>
             </div>
         </div>

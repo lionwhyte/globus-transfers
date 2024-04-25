@@ -106,7 +106,7 @@
                         <a href="tel:+385955261413"
                             class="block mb-0.5 py-1 px-4 bg-cyan-700">
                             <span class="icon icon-themeenergy_call"><i class="fa-solid fa-phone"></i></span>
-                            <span>+385 99 387 5710</span>
+                            <span>+385 95 526 1413</span>
                         </a>
                     </address>
                 </li>
@@ -115,7 +115,7 @@
                         <a href="mailto:luka.predovan01@gmail.com"
                             class="block mb-0.5 py-1 px-4 bg-cyan-700">
                             <span class="icon icon-themeenergy_mail-2"><i class="fa-solid fa-envelope"></i></span>
-                            <span>info@globustransfers.com</span>
+                            <span>luka.predovan01@gmail.com</span>
                         </a>
                     </address>
                 </li>
