@@ -3,6 +3,41 @@
 
 @section('meta')
 <meta name="description" content="Discover reliable passenger transport services in Croatia and neighboring countries with Globus Shuttle Transfers. Contact us today for seamless shuttle transfers and professional transportation solutions across the region. Schedule your journey with our trusted network of drivers and vehicles.">
+<link rel="canonical" href="{{ url()->current() }}">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "Globus Transfers",
+        "url": "https://www.globustransfers.hr/contact",
+        "logo": "https://www.globustransfers.hr/images/globus-transfers-logo.jpg",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+385955261413",
+            "email": "luka.predovan01@gmail.com",
+            "contactType": "Customer Service",
+            "areaServed": "HR",
+            "availableLanguage": ["en", "hr"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ulica Dr. Franje Tuđmana 85",
+            "addressLocality": "Vrsi",
+            "addressRegion": "Zadar",
+            "postalCode": "23235",
+            "addressCountry": "HR"
+        },
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=61557956495347",
+            "https://www.instagram.com/globustransferscroatia/",
+            "https://www.tripadvisor.com/UserReviewEdit-g1190833-d27700791-Globus_Transfers-Vrsi_Zadar_County_Dalmatia.html"
+        ]
+    }
+}
+</script>
+    
 <title>Contact us | Globus Transfers Croatia</title>
 @endsection
 

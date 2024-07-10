@@ -3,11 +3,66 @@
 @section('meta')
 <meta name="description" 
     content="Octopus Transfers Croatia links travelers throughout Croatia and nearby nations using our extensive network of skilled drivers and vehicles.">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Globus Transfers",
+    "image": "https://www.globustransfers.hr/images/globus-transfers-logo.jpg",
+    "@id": "https://www.globustransfers.hr",
+    "url": "https://www.globustransfers.hr",
+    "telephone": "+385955261413",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ulica Dr. Franje Tuđmana 85",
+        "addressLocality": "Vrsi",
+        "addressRegion": "Zadar",
+        "postalCode": "23235",
+        "addressCountry": "HR"
+    },
+    "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+    ],
+    "opens": "09:00",
+    "closes": "21:00"
+    },
+    "sameAs": [
+        "https://www.facebook.com/profile.php?id=61557956495347",
+        "https://www.instagram.com/globustransferscroatia/",
+        "https://www.tripadvisor.com/UserReviewEdit-g1190833-d27700791-Globus_Transfers-Vrsi_Zadar_County_Dalmatia.html"
+    ],
+    "priceRange": "$$",
+    "service": {
+        "@type": "Service",
+        "serviceType": "Taxi Shuttle Transport",
+        "provider": {
+            "@type": "Organization",
+            "name": "Globus Transfers"
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Croatia"
+        },
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://www.globustransfers.hr",
+            "availableLanguage": ["en", "hr"]
+        }
+    }
+}
+</script>
 <title>GLOBUS TRANSFERS | Passenger Shuttle Transportation Services in Croatia</title>
 @endsection
 
 @section('content')
-
 {{-- HERO --}}
 @include('components.hero')
 
@@ -137,6 +192,4 @@
         </div>
     </div>
 </section>
-
-
 @endsection

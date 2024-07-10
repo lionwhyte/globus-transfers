@@ -3,6 +3,7 @@
 
 @section('meta')
 <meta name="description" content="Explore our extensive list of destinations offered by Globus Shuttle Transfers across Croatia and neighboring countries. Whether you're traveling to historic cities, stunning coastal towns, or national parks, we provide convenient and reliable transportation services to popular and off-the-beaten-path locations. Discover your next adventure with us and book your shuttle transfer to your desired destination today.">
+<link rel="canonical" href="{{ url()->current() }}">
 <title>Globus Transfers Croatia | Destinations</title>
 @endsection
 

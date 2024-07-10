@@ -1,5 +1,12 @@
 /* styles.css */
 
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+    background-color: DodgerBlue; 
+    color: #ffffff; 
+}
+
 .taxi-squares-border{
     border-top: 4px solid;
     border-image: linear-gradient(to right, rgb(17 24 39) 50%, rgb(251 191 36) 0%) 50 round;
@@ -29,11 +36,6 @@ article h2 {
         background-image: linear-gradient(to right, rgb(1, 84, 105)20%, rgb(1, 55, 68, 0.5)), url("../images/globus-transfers-2.jpg.webp");
         background-size: cover;
         background-position: center;
-    }
-}
-@media only screen and (max-width: 800px) {
-    .hero {
-        background-image: linear-gradient(to right, rgb(1, 84, 105)10%, rgb(1, 55, 68, 0.5)), url("../images/globus-transfers-2.jpg.webp");
     }
 }
 

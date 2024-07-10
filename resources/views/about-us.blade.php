@@ -4,6 +4,41 @@
 <meta name="description" content="Learn more about Globus Shuttle Transfers, your trusted partner for passenger transport services in Croatia and neighboring countries. 
     Discover our commitment to providing safe, reliable, and comfortable shuttle transfers. 
     With a focus on customer satisfaction and excellence, we ensure a seamless travel experience for every journey.">
+<link rel="canonical" href="{{ url()->current() }}">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "Globus Transfers",
+        "url": "https://www.globustransfers.hr/about-us",
+        "logo": "https://www.globustransfers.hr/images/globus-transfers-logo.jpg",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+385955261413",
+            "email": "luka.predovan01@gmail.com",
+            "contactType": "Customer Service",
+            "areaServed": "HR",
+            "availableLanguage": ["en", "hr"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ulica Dr. Franje Tuđmana 85",
+            "addressLocality": "Vrsi",
+            "addressRegion": "Zadar",
+            "postalCode": "23235",
+            "addressCountry": "HR"
+        },
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=61557956495347",
+            "https://www.instagram.com/globustransferscroatia/",
+            "https://www.tripadvisor.com/UserReviewEdit-g1190833-d27700791-Globus_Transfers-Vrsi_Zadar_County_Dalmatia.html"
+        ]
+    },
+    "description": "Globus Transfers offers reliable and comfortable taxi shuttle transport services across Croatia. Learn more about our company and our commitment to providing excellent service."
+}
+</script>
 <title>About us | Globus Transfers Croatia</title>
 @endsection
 
@@ -58,7 +93,7 @@
         </section>
     </div>
     <div class="col-span-2">
-        <div class="xl:ml-12 border-2 rounded h-fit xl:sticky top-20 my-8">
+        <div class="xl:ml-12 border-2 rounded h-fit xl:sticky top-28 my-8">
             @include('partials.contact-aside')
         </div>
     </div>

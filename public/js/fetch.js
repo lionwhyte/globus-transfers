@@ -1,21 +1,19 @@
-function submitButtonDisable(submitButtonId, formId) {
-    // Disable the button to prevent multiple clicks
-    document.getElementById(submitButtonId).disabled = true;
-    document.getElementById("submissionSpinner").classList.remove("hidden");
-
-    // Submit the form
-    document.getElementById(formId).submit();
-  }
-
-
 let debounceTimer;
+let currentFocus;
+const departureSuggestionList = document.getElementById('departureSuggestionList');
+const departureSuggestions = document.getElementById('departureSuggestions');
+const departureInput = document.getElementById('departure');
+const destinationSuggestionList = document.getElementById('destinationSuggestionList');
+const destinationSuggestions = document.getElementById('destinationSuggestions');
+const destinationInput = document.getElementById('destination');
+
+keyboardSuggestionSelect(departureInput, departureSuggestionList);
+keyboardSuggestionSelect(destinationInput, destinationSuggestionList);
 
 async function getDepartureSuggestions(query) {
-    const suggestionList = document.getElementById('departureSuggestionList');
-    const departureSuggestions = document.getElementById('departureSuggestions');
-
+    currentFocus = -1;
     // Clear existing suggestions
-    suggestionList.innerHTML = '';
+    departureSuggestionList.innerHTML = '';
 
     if (query.trim() === '') {
         clearTimeout(debounceTimer);
@@ -38,19 +36,23 @@ async function getDepartureSuggestions(query) {
             const data = await response.json();
 
             // Populate suggestion list with location name suggestions
-            data.forEach(locationName => {
+            data.forEach((locationName, index) => {
                 const li = document.createElement('li');
                 li.textContent = locationName;
-                li.classList.add('bg-white', 'hover:bg-cyan-600', 'hover:text-white', 'px-6', 'py-1', 'border', 'cursor-pointer');
+                li.classList.add('px-6', 'py-1', 'border', 'cursor-pointer');
                 li.addEventListener('click', function () {
                     selectSuggestionDeparture(locationName);
                 });
-
-                suggestionList.appendChild(li);
+                li.addEventListener('mouseover', function (e) {
+                    currentFocus = index;
+                    const x = departureSuggestionList.getElementsByTagName("li");
+                    addActive(x);
+                });
+                departureSuggestionList.appendChild(li);
             });
 
             // Display the suggestion dropdown if the list is not empty
-            if (suggestionList.childElementCount > 0) {
+            if (departureSuggestionList.childElementCount > 0) {
                 departureSuggestions.style.display = 'block';
             } else {
                 departureSuggestions.style.display = 'none';
@@ -62,11 +64,9 @@ async function getDepartureSuggestions(query) {
 }
 
 async function getDestinationSuggestions(queryDeparture, queryDestination) {
-    const suggestionList = document.getElementById('destinationSuggestionList');
-    const destinationSuggestions = document.getElementById('destinationSuggestions');
-
+    currentFocus = -1;
     // Clear existing suggestions
-    suggestionList.innerHTML = '';
+    destinationSuggestionList.innerHTML = '';
 
     if (queryDestination.trim() === '') {
         clearTimeout(debounceTimer);
@@ -89,19 +89,22 @@ async function getDestinationSuggestions(queryDeparture, queryDestination) {
             const data = await response.json();
 
             // Populate suggestion list with destination name suggestions
-            data.forEach(destinationName => {
+            data.forEach((destinationName, index) => {
                 const li = document.createElement('li');
                 li.textContent = destinationName;
-                li.classList.add('bg-white', 'hover:bg-cyan-600', 'hover:text-white', 'px-6', 'py-1', 'border', 'cursor-pointer');
+                li.classList.add('px-6', 'py-1', 'border', 'cursor-pointer');
                 li.addEventListener('click', function () {
                     selectSuggestionDestination(destinationName);
                 });
-
-                suggestionList.appendChild(li);
+                li.addEventListener('mouseover', function (e) {
+                    currentFocus = index;
+                    const x = destinationSuggestionList.getElementsByTagName("li");
+                    addActive(x);
+                });
+                destinationSuggestionList.appendChild(li);
             });
-
             // Display the suggestion dropdown if there are any suggestions
-            if (suggestionList.childElementCount > 0) {
+            if (destinationSuggestionList.childElementCount > 0) {
                 destinationSuggestions.style.display = 'block';
             } else {
                 destinationSuggestions.style.display = 'none';
@@ -113,37 +116,65 @@ async function getDestinationSuggestions(queryDeparture, queryDestination) {
 }
 
 function selectSuggestionDeparture(locationName) {
-
     // You may want to update the input field with the selected value
     document.getElementById('departure').value = locationName;
-
     // Hide the suggestion dropdown
     document.getElementById('departureSuggestions').style.display = 'none';
 }
 
 function selectSuggestionDestination(destinationName) {
-
     // You may want to update the input field with the selected value
     document.getElementById('destination').value = destinationName;
-
     // Hide the destination suggestion dropdown
     document.getElementById('destinationSuggestions').style.display = 'none';
+}
+
+function keyboardSuggestionSelect(inp, suggestionList) {
+    // Add new event listener
+    inp.addEventListener("keydown", handleKeyDown);
+
+    function handleKeyDown(e) {
+        const x = suggestionList.getElementsByTagName("li");
+        if (e.keyCode == 40) {
+            currentFocus++;
+            addActive(x);
+        } else if (e.keyCode == 38) {
+            currentFocus--;
+            addActive(x);
+        } else if (e.keyCode == 13) {
+            e.preventDefault();
+            if (currentFocus > -1) {
+                if (x) x[currentFocus].click();
+            }
+        }
+    }
+}
+
+function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    if(x[0]) x[currentFocus].classList.add("autocomplete-active");
+}
+
+function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove("autocomplete-active");
+    }
 }
 
 // Event listener to close the dropdowns when clicking outside
 document.addEventListener('click', function (event) {
     const departureSuggestions = document.getElementById('departureSuggestions');
     const destinationSuggestions = document.getElementById('destinationSuggestions');
-
     if (!event.target.closest('#departureSuggestions') && !event.target.matches('#departure')) {
         departureSuggestions.style.display = 'none';
     }
-
     if (!event.target.closest('#destinationSuggestions') && !event.target.matches('#destination')) {
         destinationSuggestions.style.display = 'none';
     }
 });
-
 
 //CLEAR INPUTS
 function clearInput(inputId) {
@@ -156,9 +187,7 @@ function clearInput(inputId) {
 
     // Hide clear button
     clearButton.style.display = 'none';
-    
 }
-
 
 const clearButtons = document.querySelectorAll('.clear-input-button');
 
@@ -166,7 +195,6 @@ const clearButtons = document.querySelectorAll('.clear-input-button');
 clearButtons.forEach(function (clearButton) {
     clearButton.nextElementSibling.addEventListener('input', function (event) {
         const input = event.target;
-
         // Toggle clear button visibility based on input value
         if (input.value.trim() !== '') {
             clearButton.style.display = 'block';

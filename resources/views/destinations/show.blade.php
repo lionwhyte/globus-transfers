@@ -2,6 +2,7 @@
 
 <?php
 // Assuming $location->location_description contains the HTML content
+$htmlContent = htmlspecialchars($location->location_description);
 $htmlContent = $location->location_description;
 
 // Create a DOMDocument instance to parse the HTML
@@ -24,6 +25,7 @@ if ($paragraphs->length > 0) {
 
 @section('meta')
 <meta name="description" content="{{ $lastParagraph }}">
+<link rel="canonical" href="{{ url()->current() }}">
 <title>{{ $location->location_name }} | Globus Transfers Croatia | Destinations</title>
 @endsection
 

@@ -34,11 +34,16 @@ $breadcrumbs = [
         Cookies are essential for the proper functioning of our website and help us improve your experience.</p>
 
     <h2 class="text-lg font-semibold text-sky-700 mt-6 mb-2">Types of Cookies Used:</h2>
-    <ol>
+    <ol class="space-y-2">
         <li><strong>XSRF-TOKEN:</strong> This cookie is necessary for protection against Cross-Site Request Forgery (CSRF) attacks. 
             It helps ensure the security of your interaction with our website.</li>
+        <li><strong>_ga:</strong> This is the Google Analytics cookie. 
+            It is used to distinguish users and is typically associated with the Google Analytics tracking script. 
+            The cookie stores a unique client identifier (Client ID), which is used to generate statistical data on how visitors use the website.</li>
+        <li><strong>_gat</strong> This cookie is used to throttle request rate. It limits the collection of data on high-traffic sites. The cookie is updated every time data is sent to Google Analytics.</li>
+        <li><strong>_gid</strong> This cookie is used to distinguish users. It stores and updates a unique ID for each page visited on the site.</li>
 
-        <li><strong>laravel_session:</strong> This cookie manages your session on our website, 
+        <li><strong>globus_transfers_session:</strong> This cookie manages your session on our website, 
             allowing us to authenticate you and provide a seamless experience as you navigate through our web store.</li>
     </ol>
 
