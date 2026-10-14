@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+@php
+    $locale = app()->getLocale();
+@endphp
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,17 +15,16 @@
         <div class="mb-8">
             <img src="{{asset('images/globus-transfers-logo.jpg')}}" class="logo w-80 mx-auto" alt="Globus Transfers Logo">
         </div>
-        <h1 class="text-2xl font-semibold text-red-600 mb-4">Payment Canceled</h1>
+        <h1 class="text-2xl font-semibold text-red-600 mb-4">@lang('content.payment_cancel_hdg')</h1>
         <p>
-            Unfortunately, your payment was canceled or unsuccessful. If you have any questions or concerns,
-            please contact us at
+            @lang('content.payment_cancel_para')
         </p>
         <address class="my-2 text-lg">
             <a href="mailto:luka.predovan01@gmail.com" class="contact-data space-x-1 transition hover:text-cyan-600">
                 <span>luka.predovan01@gmail.com</span>
             </a>
         </address>
-        <span>or call us on</span>
+        <span>@lang('content.payment_cancel_para2')</span>
         <address class="mt-2 mb-4 text-lg">
             <a href="tel:+385955261413" class="contact-data space-x-1 transition hover:text-cyan-600">
                 <span>+385 95 526 1413.</span>
@@ -30,7 +32,7 @@
         </address>
         
         <!-- You can add more content or customization here if needed -->
-        <a href="{{ route('home') }}" class="text-indigo-700 underline text-lg">Back to Home</a>
+        <a href="{{ '/' . $locale }}" class="text-indigo-700 underline text-lg">@lang('content.error_back')</a>
     </div>
 </body>
 </html>

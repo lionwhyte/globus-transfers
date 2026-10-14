@@ -1,68 +1,35 @@
 @extends('layout')
-
+@php
+    $locale = app()->getLocale();
+@endphp
 
 @section('meta')
-<meta name="description" content="Discover reliable passenger transport services in Croatia and neighboring countries with Globus Shuttle Transfers. Contact us today for seamless shuttle transfers and professional transportation solutions across the region. Schedule your journey with our trusted network of drivers and vehicles.">
+<meta name="{{ __('content.description') }}" content="{{ __('content.contact_meta') }}">
 <link rel="canonical" href="{{ url()->current() }}">
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "mainEntity": {
-        "@type": "Organization",
-        "name": "Globus Transfers",
-        "url": "https://www.globustransfers.hr/contact",
-        "logo": "https://www.globustransfers.hr/images/globus-transfers-logo.jpg",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+385955261413",
-            "email": "luka.predovan01@gmail.com",
-            "contactType": "Customer Service",
-            "areaServed": "HR",
-            "availableLanguage": ["en", "hr"]
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Ulica Dr. Franje Tuđmana 85",
-            "addressLocality": "Vrsi",
-            "addressRegion": "Zadar",
-            "postalCode": "23235",
-            "addressCountry": "HR"
-        },
-        "sameAs": [
-            "https://www.facebook.com/profile.php?id=61557956495347",
-            "https://www.instagram.com/globustransferscroatia/",
-            "https://www.tripadvisor.com/UserReviewEdit-g1190833-d27700791-Globus_Transfers-Vrsi_Zadar_County_Dalmatia.html"
-        ]
-    }
-}
-</script>
     
-<title>Contact us | Globus Transfers Croatia</title>
+<title>@lang('content.contact_title')</title>
 @endsection
 
 
 @php
     $breadcrumbs = [
-    ['title' => 'HOME', 'url' => '/'],
-    ['title' => 'CONTACT', 'url' => '']
+    ['title' => __('content.home'), 'url' => '/'],
+    ['title' => __('content.contact'), 'url' => '']
 ];
 @endphp
 
 @section('content')
 <section class="bg-gradient-to-br from-cyan-600 to-cyan-800 text-white">
     <div class="mx-auto container px-6 md:px-4 lg:px-20 flex space-y-1 md:space-y-0 flex-col md:flex-row md:justify-between md:items-center py-10">
-        <h1 class="text-2xl">Contact Us</h1>
+        <h1 class="text-2xl">@lang('content.contact_hdg1')</h1>
         @include('partials.breadcrumbs')
     </div>
     
 </section>
 
 <section class="mx-auto container px-6 md:px-4 lg:px-20 text-gray-600">
-    <h2 class="text-2xl py-8">Send us a message</h2>
-    <p>If you require additional details or have inquiries about a tour, are unable to locate your preferred route, or have questions about a multi-stop transfer, 
-        please complete the contact form. We will quickly attend to your message and provide the information you need.
-    </p>
+    <h2 class="text-2xl py-8">@lang('content.contact_hdg2')</h2>
+    <p>@lang('content.contact_para1')</p>
 
     @if ($errors->any())
     <div class="alert alert-danger my-12">
@@ -73,30 +40,31 @@
         </ul>
     </div>
     @endif
-
+    <h2 class="text-2xl text-red-600">@lang('content.form-not-functional')</h2>
     <div class="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-7 my-8">
-        <form method="post" action="{{ route('contact.send') }}" class="lg:col-span-4 space-y-4" id="contactForm">
+        
+        <form class="lg:col-span-4 space-y-4">
             @csrf
             <div class="flex flex-col space-y-2">
-                <label for="contact_full_name">YOUR NAME *</label>
+                <label for="contact_full_name">@lang('content.contact_label1') *</label>
                 <input type="text" name="contact_full_name" id="contact_full_name" class="border-2 w-full rounded p-2" value="{{old('contact_full_name')}}">
             </div>
             <div class="flex flex-col space-y-2">
-                <label for="contact_email">EMAIL ADDRESS *</label>
+                <label for="contact_email">@lang('content.contact_label2') *</label>
                 <input type="contact_email" name="contact_email" id="contact_email" class="border-2 w-full rounded p-2" value="{{old('contact_email')}}">
             </div>
             <div class="flex flex-col space-y-2">
-                <label for="contact_phone">PHONE *</label>
+                <label for="contact_phone">@lang('content.contact_label3') ( @lang('content.reservation_optional') )</label>
                 <input type="text" name="contact_phone" id="contact_phone" class="border-2 w-full rounded p-2" value="{{old('contact_phone')}}">
             </div>
             <div class="flex flex-col space-y-2">
-                <label for="contact_message" class="">MESSAGE *</label>
+                <label for="contact_message" class="">@lang('content.contact_label4') *</label>
                 <textarea name="contact_message" class="input-text w-full border-2 p-2 rounded" id="contact_message" rows="5">{{old('contact_message')}}</textarea>
             </div>
             <div class="text-end">
                 <button type="submit" id="contactSubmitButton" onclick="submitButtonDisable('contactSubmitButton', 'contactForm')"
                     class="px-4 py-2 mt-4 md:mt-0 w-fit rounded bg-amber-500 transition hover:bg-amber-600 text-white text-lg">
-                    <span>Send Message</span>
+                    <span>@lang('content.contact_send')</span>
                     <span>
                         <div role="status">
                             <svg aria-hidden="true" id="submissionSpinner" class="hidden inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-gray-600 dark:fill-gray-300" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

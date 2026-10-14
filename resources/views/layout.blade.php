@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+@php
+    $locale = app()->getLocale();
+@endphp
+<html lang="{{ $locale }}">
 
 <head>
     <meta charset="UTF-8" />
@@ -16,7 +19,7 @@
     {{-- <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script> --}}
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"> --}}
     {{-- <script src="https://cdn.jsdelivr.net/npm/moment"></script> --}}
-    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+    <script src="https://cdn.tailwindcss.com"></script>
     @if(request()->is('search') || request()->routeIs('destinations.show'))
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqRlLaoJ3wLxYVElQwCQCqFelRvievnO8&callback=initMap"></script>
     @endif
@@ -38,6 +41,7 @@
     <script src="{{ asset('js/transitions.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script>
 <script>
+    const locale = "{{ $locale }}";
     window.addEventListener("load", function(){
         window.cookieconsent.initialise({
             "palette": {
@@ -48,7 +52,7 @@
                 "message": "We use cookies to improve your experience. By continuing to use this site, you agree to our Cookie Policy",
                 "dismiss": "Accept", // Customize the button text for acceptance
                 "link": "Read more",
-                "href": "{{ route('cookie.policy') }}" // Link to your cookie policy page
+                "href": "/" + locale + "/cookie-policy", // Link to your cookie policy page
             },
             "type": "opt-in", // Add this line to enable user choice
             "elements": {
@@ -91,10 +95,10 @@
     });
 </script>
 
-    @if(request()->is('/') || request()->is('search') || Route::is('reservation.create'))
+    @if(request()->is("/") || request()->is($locale) || request()->is($locale . '/search') || Route::is('reservation.create'))
     <script src="{{ asset('js/fetch.js') }}"></script>
     @endif
-    @if(Route::is('reservation.create') || request()->is('contact'))
+    @if(Route::is('reservation.create') || request()->is($locale . '/contact'))
     <script src="{{ asset('js/submit.js') }}"></script>
     @endif
     @include('components.flash-message') 

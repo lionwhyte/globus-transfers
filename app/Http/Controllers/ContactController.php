@@ -25,14 +25,30 @@ class ContactController extends Controller
             session('contactData.contact_phone') == $request->input('contact_phone') &&
             session('contactData.contact_message') == $request->input('contact_message')
         ) {
-            return view('contact', ['failed_message' => 'Your message has already been sent.']);
+            return view('contact', ['failed_message' => __('content.contact_message_failed')]);
         }
-        // Validate the input
+
+        // Validate the input with custom error messages
         $request->validate([
             'contact_full_name' => 'required|string|max:255',
             'contact_email' => 'required|email|max:255',
-            'contact_phone' => 'required|string|max:20',
+            'contact_phone' => 'max:20',
             'contact_message' => 'required|string',
+        ], [
+            'contact_full_name.required' => __('content.contact_full_name_required'),
+            'contact_full_name.string' =>  __('content.contact_full_name_string'),
+            'contact_full_name.max' =>  __('content.contact_full_name_max'),
+            
+            'contact_email.required' =>  __('content.contact_email_required'),
+            'contact_email.email' =>  __('content.contact_email_email'),
+            'contact_email.max' =>  __('content.contact_email_max'),
+            
+            // 'contact_phone.required' =>  __('content.contact_phone_required'),
+            'contact_phone.string' =>  __('content.contact_phone_string'),
+            'contact_phone.max' =>  __('content.contact_phone_max'),
+            
+            'contact_message.required' =>  __('content.contact_message_required'),
+            'contact_message.string' =>  __('content.contact_message_string'),
         ]);
 
         // Mark the order as confirmed in the session
@@ -47,6 +63,6 @@ class ContactController extends Controller
         // Send mail to the company
         Mail::to(env('MAIL_FROM_ADDRESS'))->send(new ContactMail($request));
         
-        return view('contact', ['success_message' => 'Your message has been sent. We will get back to you soon.']);
+        return view('contact', ['success_message' => __('content.contact_message_success')]);
     }
 }

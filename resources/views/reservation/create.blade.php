@@ -1,9 +1,12 @@
 @extends('layout')
+@php
+    $locale = app()->getLocale();
+@endphp
 
 @section('meta')
-<meta name="description" 
-    content="Octopus Transfers Croatia links travelers throughout Croatia and nearby nations using our extensive network of skilled drivers and vehicles.">
-<title>Reservation | Globus Transfers Croatia</title>
+<meta name="{{ __('content.description') }}" 
+    content="{{ __('content.reservation_meta') }}">
+<title>@lang('content.reservation_title')</title>
 @endsection
 
 @section('content')
@@ -11,10 +14,9 @@
 @include('components.route-finder')
 
 <section class="container px-6 md:px-4 lg:px-20 mx-auto text-gray-600">
-    <h2 class="text-2xl mt-8 mb-4">Passenger and reservation details</h2>
+    <h2 class="text-2xl mt-8 mb-4">@lang('content.reservation_hdg')</h2>
     <p class="mb-2">
-        Make sure to fill out all necessary fields when making a booking to guarantee a seamless journey. Completion of
-        every field is mandatory.</p>
+        @lang('content.reservation_para')</p>
 </section>
 
 
@@ -29,14 +31,15 @@
         </ul>
     </div>
     @endif
-    <form method="post" action="{{ route('reservation.store') }}" id="orderForm"
-        class="container mx-auto my-8 p-4 lg:grid lg:grid-cols-10 space-y-6 lg:space-y-0">
+    <h2 class="text-2xl text-red-600">This is a demo form, not functional</h2>
+    <form
+        method="POST" action="{{ route('reservation.store', ['locale' => app()->getLocale()]) }}" id="orderForm" class="container mx-auto my-8 p-4 lg:grid lg:grid-cols-10 space-y-6 lg:space-y-0">
         @csrf
         {{-- PODACI KUPCA --}}
         <div class="col-span-6 pr-10">
             <div class="space-y-4">
                 <p>
-                    <label for="billing_first_name">First Name<abbr class="required text-red-500"
+                    <label for="billing_first_name">@lang('content.reservation_label1')<abbr class="required text-red-500"
                             title="Required">*</abbr></label><br><input type="text"
                         class="input-text w-full border-2 p-2 rounded" name="first_name" id="billing_first_name"
                         value="{{old('first_name')}}" autocomplete="given-name">
@@ -46,7 +49,7 @@
                 @enderror
 
                 <p>
-                    <label for="billing_last_name">Last Name<abbr class="required text-red-500"
+                    <label for="billing_last_name">@lang('content.reservation_label2')<abbr class="required text-red-500"
                             title="Required">*</abbr></label><br><input type="text"
                         class="input-text w-full border-2 p-2 roundedborder-2 p-2 rounded" name="last_name"
                         id="billing_last_name" value="{{old('last_name')}}" autocomplete="family-name">
@@ -56,7 +59,7 @@
                 @enderror
 
                 <p id="billing_email_field">
-                    <label for="billing_email">Email<abbr class="required text-red-500"
+                    <label for="billing_email">@lang('content.reservation_label3')<abbr class="required text-red-500"
                             title="Required">*</abbr></label><br><input type="text"
                         class="input-text w-full border-2 p-2 rounded" name="email" id="billing_email" placeholder=""
                         value="{{old('email')}}" autocomplete="email username">
@@ -66,7 +69,7 @@
                 @enderror
 
                 <p>
-                    <label for="email_confirmation">Email Confirmation<abbr class="required text-red-500"
+                    <label for="email_confirmation">@lang('content.reservation_label4')<abbr class="required text-red-500"
                             title="Required">*</abbr></label><br><input type="text"
                         class="input-text w-full border-2 p-2 rounded" name="email_confirmation" id="email_confirmation"
                         placeholder="" value="{{old('email_confirmation')}}" autocomplete="email username">
@@ -76,7 +79,7 @@
                 @enderror
 
                 <p id="billing_phone_field">
-                    <label for="billing_phone">Phone Number (Including country code)<abbr
+                    <label for="billing_phone">@lang('content.reservation_label5')<abbr
                             class="required text-red-500" title="Required">*</abbr></label><br><input type="tel"
                         class="input-text w-full border-2 p-2 rounded" name="phone" id="billing_phone" placeholder=""
                         value="{{old('phone')}}" autocomplete="tel">
@@ -86,7 +89,7 @@
                 @enderror
 
                 <p>
-                    <label for="passengers2">Passengers @if ($vehicle == 'standard')
+                    <label for="passengers2">@lang('content.reservation_label6') @if ($vehicle == 'standard')
                         (Max:3)
                         @elseif($vehicle == 'minivan')
                         (Max:8)
@@ -101,31 +104,31 @@
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
 
-                <h2 class="text-2xl">EXTRAS</h2>
+                <h2 class="text-2xl">@lang('content.reservation_extras')</h2>
 
                 <p>
-                    <label for="infant_seat">Infant Seat (0-1 YEAR)</label><br>
+                    <label for="infant_seat">@lang('content.reservation_label7')</label><br>
                     <input type="number"
                         class="w-full border-2 p-2 rounded" name="infant_seat" id="infant_seat"
                         value="{{old('infant_seat')}}">
                 </p>
 
                 <p>
-                    <label for="child_seat">Child Seat (1-5 YEAR)</label><br>
+                    <label for="child_seat">@lang('content.reservation_label8')</label><br>
                     <input type="number"
                         class="w-full border-2 p-2 rounded" name="child_seat" id="child_seat"
                         value="{{old('child_seat')}}">
                 </p>
 
                 <p>
-                    <label for="booster_seat">Booster Seat (5-12 YEAR)</label><br>
+                    <label for="booster_seat">@lang('content.reservation_label9')</label><br>
                     <input type="number"
                         class="w-full border-2 p-2 rounded" name="booster_seat" id="booster_seat"
                         value="{{old('booster_seat')}}">
                 </p>
 
                 <p>
-                    <label for="luggage">Luggage (number of bags)</label><br>
+                    <label for="luggage">@lang('content.reservation_label10')</label><br>
                     <input type="number"
                         class="w-full border-2 p-2 rounded" name="luggage" id="luggage" value="{{old('luggage')}}">
                 </p>
@@ -133,10 +136,10 @@
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
 
-                <h2 class="text-2xl">TRANSFER DETAILS</h2>
+                <h2 class="text-2xl">@lang('content.reservation_details')</h2>
 
                 <p>
-                    <label for="date">Pick-up Date
+                    <label for="date">@lang('content.reservation_label11')
                         <abbr class="required text-red-500" title="Required">*</abbr></label><br><input type="text"
                         class="w-full border-2 p-2 rounded" name="departure-date" id="date"
                         value="{{ $departureDate }}" readonly>
@@ -146,7 +149,7 @@
                 @enderror
 
                 <p>
-                    <label for="pickup-time">Pick-up Time
+                    <label for="pickup-time">@lang('content.reservation_label12')
                         <abbr class="required text-red-500" title="Required">*</abbr></label><br><input type="time"
                         class="w-full border-2 p-2 rounded" name="pickup-time" id="pickup-time"
                         value="{{old('pickup-time')}}">
@@ -156,7 +159,7 @@
                 @enderror
 
                 <p>
-                    <label for="billing_address_1">Pick-up Address<abbr class="required text-red-500"
+                    <label for="billing_address_1">@lang('content.reservation_label13')<abbr class="required text-red-500"
                             title="Required">*</abbr></label><br><input type="text"
                         class="input-text w-full border-2 p-2 rounded" name="pick_up_address" id="billing_address_1"
                         value="{{old('pick_up_address')}}">
@@ -165,7 +168,7 @@
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
 
-                <p><label for="billing_address_2" class="screen-reader-text">Destination Address
+                <p><label for="billing_address_2" class="screen-reader-text">@lang('content.reservation_label14')
                     <abbr class="required text-red-500"
                     title="Required">*</abbr></label><br><input
                         type="text" class="input-text w-full border-2 p-2 rounded" name="destination_address"
@@ -174,14 +177,14 @@
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
 
-                <p><label for="flight_number" class="screen-reader-text">Flight Number<span
-                            class="optional">(optional)</span></label><br><input type="text"
+                <p><label for="flight_number" class="screen-reader-text">@lang('content.reservation_label15')<span
+                            class="optional"> ( @lang('content.reservation_optional') )</span></label><br><input type="text"
                         class="input-text w-full border-2 p-2 rounded" name="flight_number" id="flight_number"
                         value="{{old('flight_number')}}"></p>
 
-                <p><label for="order_comments">Message<span
-                            class="optional">(optional)</span></label><br><textarea name="order_comments"
-                        class="input-text w-full border-2 p-2 rounded" id="order_comments" rows="5" cols="50">{{old('order_comments')}}
+                <p><label for="order_message">@lang('content.reservation_label16')<span
+                            class="optional"> ( @lang('content.reservation_optional') )</span></label><br><textarea name="order_message"
+                        class="input-text w-full border-2 p-2 rounded" id="order_message" rows="5" cols="50">{{old('order_message')}}
                 </textarea></p>
             </div>
         </div>
@@ -190,38 +193,30 @@
         <div class="col-span-4">
             <div class="sticky top-32">
                 <div class="border rounded border-gray-300 p-8">
-                    <h3 class="text-xl font-bold text-gray-700">YOUR ORDER</h3>
+                    <h3 class="text-xl font-bold text-gray-700">@lang('content.reservation_order')</h3>
                     <div class="p-4 border-2 my-4 rounded">
-                        <h5 class="mb-2 font-semibold text-lg">DEPARTURE</h5>
-                        <p class="flex justify-between items-center"><span>FROM</span><span>{{ $departureLocationName }}</span></p>
-                        <p class="flex justify-between items-center"><span>TO</span><span>{{ $destinationLocationName }}</span> </p>
-                        <p class="flex justify-between items-center"><span>VEHICLE</span><span>{{ strtoupper($vehicle) }}</span></p>
+                        <h5 class="mb-2 font-semibold text-lg">@lang('content.reservation_departure')</h5>
+                        <p class="flex justify-between items-center"><span>@lang('content.reservation_from')</span><span>{{ $departureLocationName }}</span></p>
+                        <p class="flex justify-between items-center"><span>@lang('content.reservation_to')</span><span>{{ $destinationLocationName }}</span> </p>
+                        <p class="flex justify-between items-center"><span>@lang('content.reservation_vehicle')</span><span>{{ strtoupper($vehicle) }}</span></p>
                     </div>
 
                     <div class="py-2 rounded font-semibold bg-cyan-600 text-white text-center">
-                        <p class="text-sm">{{ $roundTrip ? 'Return trip' : 'One way trip' }}</p>
+                        <p class="text-sm">{{ $roundTrip ? __('content.roundtrip_included') : __('content.oneway_trip') }}</p>
                         <p class="flex justify-center items-center">
-                            <span class="text-lg mr-2 mt-1">TOTAL</span>
-                            <span class="text-3xl">{{ $total_price }} €</span>
+                            <span class="text-lg mr-2 mt-1">@lang('content.reservation_total')</span>
+                            <span class="text-3xl">{{ $total_price }},00 €</span>
                         </p>
                     </div>
 
 
-                    <div class="mt-4 py-2 border-t-2 space-y-4">
-                        <p>To confirm your reservation, we kindly request you to make the full payment during the booking process. We offer a secure payment option:</p>
-                        <p><strong>Direct Bank Transfer:</strong> You can choose to transfer the total amount directly to our bank account. Details for the bank transfer 
-                            will be provided upon completing your reservation.</p>
-                        <p>Please note that the payment must be completed before your transfer date to ensure a smooth and hassle-free journey. Thank you for choosing our service! 
-                            If you have any questions or need assistance, 
-                            feel free to <a href="/contact" class="text-cyan-600 hover:text-cyan-700">contact us</a>.</p>
-                        
-                    </div>
-                    <h4 class="text-lg font-bold mt-8 py-2 text-gray-700 border-t-2">Payment Methods</h4>
+                    @lang('content.reservation_para2')
+                    <h4 class="text-lg font-bold mt-8 py-2 text-gray-700 border-t-2">@lang('content.reservation_payments')</h4>
                     <div class="space-y-4 border-b-2 py-4">
                         <div>
                             <input type="radio" class="input-text border-2 p-2 rounded" name="payment_option"
                                 id="direct-bank-transfer" value="direct-bank-transfer" @if (old('payment_option')==="direct-bank-transfer" ) checked @endif checked>
-                            <label for="direct-bank-transfer" class="font-semibold text-cyan-700">Direct Bank Transfer <i class="fa-solid fa-building-columns"></i></label>
+                            <label for="direct-bank-transfer" class="font-semibold text-cyan-700">@lang('content.reservation_payment1') <i class="fa-solid fa-building-columns"></i></label>
                             <p class="text-sm ml-6"></p>
                         </div>
                     </div>
@@ -233,7 +228,7 @@
                     <div class="text-center mt-10">
                         <button type="submit" id="orderSubmitButton" onclick="submitButtonDisable('orderSubmitButton', 'orderForm')"
                             class="px-4 py-2 mt-4 md:mt-0 w-full rounded bg-amber-500 transition hover:bg-amber-600 text-white text-lg">
-                            <span>BOOK NOW</span>
+                            <span>@lang('content.reservation_book')</span>
                             <span>
                                 <div role="status">
                                     <svg aria-hidden="true" id="submissionSpinner" class="hidden inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-gray-600 dark:fill-gray-300" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -41,7 +41,7 @@
                         <td>luka.predovan01@gmail.com</td>
                     </tr>
                     <tr>
-                        <td><img src="{{ public_path('images/phone_icon.webp') }}" alt="Logo" width="15"></td>
+                        <td><img src="{{ public_path('images/phone_icon.png') }}" alt="Logo" width="15"></td>
                         <td>+385 95 526 1413</td>
                     </tr>
                 </table>

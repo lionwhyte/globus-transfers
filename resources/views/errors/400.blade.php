@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+@php
+    $locale = app()->getLocale();
+@endphp
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Error page 400</title>
+    <title>@lang('content.error_400_title')</title>
     <!-- Add any additional styles or scripts if needed -->
 </head>
 <body class="bg-gray-100 flex items-center justify-center h-screen">
@@ -12,13 +15,13 @@
         <div class="mb-8">
             <img src="{{asset('images/globus-transfers-logo.jpg')}}" class="logo w-64 md:w-72 mx-auto" alt="Globus Transfers Logo">
         </div>
-        <h1 class="text-2xl font-semibold text-red-600 mb-4">ERROR 400</h1>
+        <h1 class="text-2xl font-semibold text-red-600 mb-4">@lang('content.error_400_hdg1')</h1>
         <p class="mb-8">
-            Some data is missing. Please perform a new search and make a new reservation. To return to the homepage, click the Back button.
+            @lang('content.error_400_para')
         </p>
         
         <!-- You can add more content or customization here if needed -->
-        <a href="{{ route('home') }}" class="text-indigo-700 underline text-lg">Back to Home</a>
+        <a href="{{ '/' . $locale }}" class="text-indigo-700 underline text-lg">@lang('content.error_back')</a>
     </div>
 </body>
 </html>

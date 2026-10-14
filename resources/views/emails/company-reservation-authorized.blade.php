@@ -68,7 +68,7 @@
             </tr>
             <tr>
                 <td>Message</td>
-                <td>{{ $routeAndReservationData['order_comments'] }}</td>
+                <td>{{ $routeAndReservationData['order_message'] }}</td>
             </tr>
         </table>
         <table border="1" style="border-collapse: collapse;">

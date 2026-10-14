@@ -46,115 +46,115 @@
     <br>
     <br>
     <section>
-        <h2>Thank You for Choosing Our Taxi Transfer Service!</h2>
-        <p>Dear {{ ucfirst($routeAndReservationData['first_name']) }},</p>
-        <p>Your taxi reservation has been created. Our team will review it within the next 6 to 12 hours, and we'll notify you once the reservation is confirmed.</p>
-        <p>We're looking forward to providing you with a safe and comfortable journey.</p>
-        <p>If you have any questions or need assistance, please feel free to <a href="mailto:luka.predovan01@gmail.com">contact our customer support</a>.</p>
-        <p>Check the details of your booking below, and we will contact you as soon as possible!</p>
-        <p style="margin: 30px 0;"><strong>You can view and download the invoice for your booking by finding the PDF attachment down below.</strong></p>
+        <h2>@lang('content.email_hdg')</h2>
+        <p>@lang('content.email_para') {{ ucfirst($routeAndReservationData['first_name']) }},</p>
+        <p>@lang('content.email_para2')</p>
+        <p>@lang('content.email_para3')</p>
+        <p>@lang('content.email_para4') <a href="mailto:luka.predovan01@gmail.com">@lang('content.email_para5')</a>.</p>
+        <p>@lang('content.email_para6')</p>
+        <p style="margin: 30px 0;"><strong>@lang('content.email_para7')</strong></p>
     </section>
     <section>
         <table border="1" style="border-collapse: collapse;">
             <tr>
-                <th>Booking #</th>
+                <th>@lang('content.email_label1')</th>
                 <th>{{ $bookingNumber }}</th>
             </tr>
             <tr>
-                <td>Full name</td>
+                <td>@lang('content.email_label2')</td>
                 <td>{{ ucfirst($routeAndReservationData['first_name']) . ' ' . ucfirst($routeAndReservationData['last_name'])}}</td>
             </tr>
             <tr>
-                <td>E-mail</td>
+                <td>Email</td>
                 <td>{{ $routeAndReservationData['email'] }}</td>
             </tr>
             <tr>
-                <td>Phone</td>
+                <td>@lang('content.email_label3')</td>
                 <td>{{ $routeAndReservationData['phone'] }}</td>
             </tr>
             <tr>
-                <td>Message</td>
-                <td>{{ $routeAndReservationData['order_comments'] }}</td>
+                <td>@lang('content.email_label4')</td>
+                <td>{{ $routeAndReservationData['order_message'] }}</td>
             </tr>
         </table>
         <table border="1" style="border-collapse: collapse;">
             <tr>
-                <th colspan="2">Reservation details</th>
+                <th colspan="2">@lang('content.email_label5')</th>
             </tr>
             <tr>
-                <td>Number of passengers</td>
+                <td>@lang('content.email_label6')</td>
                 <td>{{ $routeAndReservationData['passengers'] }}</td>
             </tr>
 
             @if ($routeAndReservationData['infant_seat'] || $routeAndReservationData['child_seat'] || $routeAndReservationData['booster_seat'])
             <tr>
-                <td>Infant seats</td>
+                <td>@lang('content.email_label7')</td>
                 <td>{{ $routeAndReservationData['infant_seat'] }}</td>
             </tr>
             <tr>
-                <td>Child seats</td>
+                <td>@lang('content.email_label8')</td>
                 <td>{{ $routeAndReservationData['child_seat'] }}</td>
             </tr>
             <tr>
-                <td>Booster seats</td>
+                <td>@lang('content.email_label9')</td>
                 <td>{{ $routeAndReservationData['booster_seat'] }}</td>
             </tr>
             @endif
 
             @if ($routeAndReservationData['luggage'])
             <tr>
-                <td>Luggage</td>
+                <td>@lang('content.email_label10')</td>
                 <td>{{ $routeAndReservationData['luggage'] }}</td>
             </tr>
             @endif
 
             <tr>
-                <td>Departure date</td>
+                <td>@lang('content.email_label11')</td>
                 <td>{{ $routeAndReservationData['departure-date'] }}</td>
             </tr>
             <tr>
-                <td>Departure time</td>
+                <td>@lang('content.email_label12')</td>
                 <td>{{ $routeAndReservationData['pickup-time'] }}</td>
             </tr>
             <tr>
-                <td>Departure address</td>
+                <td>@lang('content.email_label13')</td>
                 <td>{{ $routeAndReservationData['pick_up_address'] }}</td>
             </tr>
             <tr>
-                <td>Destination address</td>
+                <td>@lang('content.email_label1')</td>
                 <td>{{ $routeAndReservationData['destination_address'] }}</td>
             </tr>
             @if ($routeAndReservationData['flight_number'])
             <tr>
-                <td>Flight number</td>
+                <td>@lang('content.email_label14')</td>
                 <td>{{ $routeAndReservationData['flight_number'] }}</td>
             </tr>
             @endif
             <tr>
-                <td>Vehicle</td>
+                <td>@lang('content.email_label15')</td>
                 <td>{{ $routeAndReservationData['vehicle'] }}</td>
             </tr>
             <tr>
-                <td>Price for transfer</td>
+                <td>@lang('content.email_label16')</td>
                 <td>{{ $routeAndReservationData['total_price'] }} €</td>
             </tr>
             <tr>
-                <td>Payment method</td>
+                <td>@lang('content.email_label17')</td>
                 <td>{{ $routeAndReservationData['payment_option'] }}</td>
             </tr>
             <tr>
-                <td>Additional charges</td>
+                <td>@lang('content.email_label18')</td>
                 <td>0.00 €</td>
             </tr>
             <tr>
-                <td><strong>Total</strong></td>
+                <td><strong>@lang('content.email_label19')</strong></td>
                 <td><strong>{{ $routeAndReservationData['total_price'] }} €</strong></td>
             </tr>
         </table>
         <table border="1" style="border-collapse: collapse;">
             <tr>
-                <th>Departure</th>
-                <th>Destination</th>
+                <th>@lang('content.email_label20')</th>
+                <th>@lang('content.email_label21')</th>
             </tr>
             <tr>
                 <td>{{ $routeAndReservationData['departure'] }}</td>
@@ -163,8 +163,8 @@
         </table>
         <table border="1" style="border-collapse: collapse;">
             <tr>
-                <th>Route distance</th>
-                <th>Duration</th>
+                <th>@lang('content.email_label22')</th>
+                <th>@lang('content.email_label23')</th>
             </tr>
             <tr>
                 <td>{{ $routeAndReservationData['distance'] }} km</td>

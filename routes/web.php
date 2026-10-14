@@ -19,48 +19,49 @@ use App\Http\Controllers\ReservationController;
 |
 */
 
+Route::get('/', [HomeController::class, 'index'])->name('root');
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/search', [RouteController::class, 'search']);
+// Route::get('/', function(){
+//     return view('test');
+// });
+// Route::get('/trigger-error', function () {
+//     abort(500);
+// });
 
-Route::get('/reservation', [ReservationController::class, 'create'])->name('reservation.create');
-Route::post('/reservation', [ReservationController::class, 'store'])->name('reservation.store');
-
-// Payment success route
-Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success');
-// Payment cancel route
-Route::get('/payment/cancel', [PaymentController::class, 'cancel'])->name('payment.cancel');
-
-Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
-Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
-
-Route::get('/about-us', function () {
-    return view('about-us');
+Route::group(['prefix' => '{locale}', 'middleware' => 'setAppLocale'], function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/search', [RouteController::class, 'search'])->name('search');
+    Route::get('/reservation', [ReservationController::class, 'create'])->name('reservation.create');
+    Route::post('/reservation', [ReservationController::class, 'store'])->name('reservation.store');
+    // Payment success route
+    Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success');
+    // Payment cancel route
+    Route::get('/payment/cancel', [PaymentController::class, 'cancel'])->name('payment.cancel');
+    Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
+    Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+    Route::get('/about-us', function () {
+        return view('about-us');
+    });
+    Route::get('/faq', function () {
+        return view('faq');
+    });
+    Route::get('/privacy-policy', function () {
+        return view('privacy-policy');
+    });
+    Route::get('/cookie-policy', function () {
+        return view('cookie-policy');
+    })->name('cookie.policy');
+    Route::get('/terms-and-conditions', function () {
+        return view('terms-and-conditions');
+    });
+    Route::get('/destinations/cities', [LocationController::class, 'cities'])->name('destinations.cities');
+    Route::get('/destinations/airports', [LocationController::class, 'airports'])->name('destinations.airports');
+    Route::get('/destinations/ports', [LocationController::class, 'ports'])->name('destinations.ports');
+    Route::get('/destinations/national-parks', [LocationController::class, 'parks'])->name('destinations.parks');
+    Route::get('/destinations/marinas', [LocationController::class, 'marinas'])->name('destinations.marinas');
+    Route::get('/destinations/hotels', [LocationController::class, 'hotels'])->name('destinations.hotels');
+    Route::get('/destinations/towns', [LocationController::class, 'towns'])->name('destinations.towns');
+    Route::get('/destinations/beaches', [LocationController::class, 'beaches'])->name('destinations.beaches');
+    
+    Route::get('/destinations/{slug}', [LocationController::class, 'show'])->name("destinations.show");
 });
-
-Route::get('/faq', function () {
-    return view('faq');
-});
-
-Route::get('/privacy-policy', function () {
-    return view('privacy-policy');
-});
-
-Route::get('/cookie-policy', function () {
-    return view('cookie-policy');
-})->name('cookie.policy');
-
-Route::get('/terms-and-conditions', function () {
-    return view('terms-and-conditions');
-});
-
-Route::get('/destinations/cities', [LocationController::class, 'cities'])->name('destinations.cities');
-Route::get('/destinations/airports', [LocationController::class, 'airports'])->name('destinations.airports');
-Route::get('/destinations/ports', [LocationController::class, 'ports'])->name('destinations.ports');
-Route::get('/destinations/national-parks', [LocationController::class, 'parks'])->name('destinations.parks');
-Route::get('/destinations/marinas', [LocationController::class, 'marinas'])->name('destinations.marinas');
-Route::get('/destinations/hotels', [LocationController::class, 'hotels'])->name('destinations.hotels');
-Route::get('/destinations/towns', [LocationController::class, 'towns'])->name('destinations.towns');
-Route::get('/destinations/beaches', [LocationController::class, 'beaches'])->name('destinations.beaches');
-
-Route::get('/destinations/{slug}', [LocationController::class, 'show'])->name("destinations.show");

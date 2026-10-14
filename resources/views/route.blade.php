@@ -1,9 +1,12 @@
 @extends('layout')
+@php
+    $locale = app()->getLocale();
+@endphp
 
 @section('meta')
-<meta name="description" 
-    content="Octopus Transfers Croatia links travelers throughout Croatia and nearby nations using our extensive network of skilled drivers and vehicles.">
-<title>Search | Globus Transfers Croatia</title>
+<meta name="{{ __('content.description') }}" 
+    content="{{ __('content.route_meta') }}">
+<title>@lang('content.route_title')</title>
 @endsection
 
 @section('content')
@@ -11,7 +14,7 @@
 @include('components.route-finder')
 
 <section class="container px-6 md:px-4 lg:px-20 mx-auto text-gray-600">
-    <h2 class="mt-10 mb-16 text-2xl">Select transfer type for your trip from {{ $departureLocationName }} to {{ $destinationLocationName }}</h2>
+    <h2 class="mt-10 mb-16 text-2xl">@lang('content.route_from') {{ $departureLocationName }} @lang('content.route_to') {{ $destinationLocationName }}</h2>
     <div class="space-y-6">
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-2 items-center text-center border rounded py-4">
             @if ($distance && $duration)
@@ -21,7 +24,7 @@
             
             <div class="col-span-2 sm:col-span-1 sm:border-r border-b sm:border-b-0 pb-8 sm:pb-0 px-2 h-full flex flex-col justify-center">
                 <p class="font-semibold">STANDARD</p>
-                <p>Max 3 passengers</p>
+                <p>Max 3 @lang('content.max_passengers')</p>
             </div>
             
             <div class="col-span-1 border-r px-2 h-full flex flex-col justify-center">
@@ -35,11 +38,11 @@
             <div class="col-span-2 sm:col-span-1 border-t sm:border-t-0 pt-8 sm:pt-0 px-2">
                 <p class="text-4xl text-cyan-700">{{ $standardPrice }} €</p>
                 @if ($roundTrip)
-                <p>Round trip included</p>
+                <p>@lang('content.roundtrip_included')</p>
                 @else
-                <p>Oneway trip</p>
+                <p>@lang('content.oneway_trip')</p>
                 @endif
-                <a href="{{ route('reservation.create') }}?vehicle=standard" 
+                <a href="{{ route('reservation.create', ['locale' => $locale]) }}?vehicle=standard" 
                     class="w-full inline-block p-4 rounded bg-amber-500 transition hover:bg-amber-600 text-white mt-4">SELECT</a>
                 @else
                 <p>Failed to calculate distance and time.</p>
@@ -53,7 +56,7 @@
             </div>
             <div class="col-span-2 sm:col-span-1 sm:border-r border-b sm:border-b-0 pb-8 sm:pb-0 px-2 h-full flex flex-col justify-center">
                 <p class="font-semibold">MINIVAN</p>
-                <p>Max 8 passengers</p>
+                <p>Max 8 @lang('content.max_passengers')</p>
             </div>
             <div class="col-span-1 border-r px-2 h-full flex flex-col justify-center">
                 <p class="col-span-1"><i class="fa-regular fa-map text-4xl"></i><br>{{ $distance }} km</p>
@@ -66,11 +69,11 @@
             <div class="col-span-2 sm:col-span-1 border-t sm:border-t-0 pt-8 sm:pt-0 px-2">
                 <p class="text-4xl text-cyan-700">{{ $minivanPrice }} €</p>
                 @if ($roundTrip)
-                <p>Round trip included</p>
+                <p>@lang('content.roundtrip_included')</p>
                 @else
-                <p>Oneway trip</p>
+                <p>@lang('content.oneway_trip')</p>
                 @endif
-                <a href="{{ route('reservation.create') }}?vehicle=minivan" 
+                <a href="{{ route('reservation.create', ['locale' => $locale]) }}?vehicle=minivan" 
                     class="w-full inline-block p-4 rounded bg-amber-500 transition hover:bg-amber-600 text-white mt-4">SELECT</a>
                 @else
                 <p>Failed to calculate distance and time.</p>
@@ -84,7 +87,7 @@
             </div>
             <div class="col-span-2 sm:col-span-1 sm:border-r border-b sm:border-b-0 pb-8 sm:pb-0 px-2 h-full flex flex-col justify-center">
                 <p class="font-semibold">MINIBUS</p>
-                <p>Max 16 passengers</p>
+                <p>Max 16 @lang('content.max_passengers')</p>
             </div>
             <div class="col-span-1 border-r px-2 h-full flex flex-col justify-center">
                 <p class="col-span-1"><i class="fa-regular fa-map text-4xl"></i><br>{{ $distance }} km</p>
@@ -95,11 +98,11 @@
             <div class="col-span-2 sm:col-span-1 border-t sm:border-t-0 pt-8 sm:pt-0 px-2">
                 <p class="text-4xl text-cyan-700">{{ $minibusPrice }} €</p>
                 @if ($roundTrip)
-                <p>Round trip included</p>
+                <p>@lang('content.roundtrip_included')</p>
                 @else
-                <p>Oneway trip</p>
+                <p>@lang('content.oneway_trip')</p>
                 @endif
-                <a href="{{ route('reservation.create') }}?vehicle=minibus" 
+                <a href="{{ route('reservation.create', ['locale' => $locale]) }}?vehicle=minibus" 
                     class="w-full inline-block p-4 rounded bg-amber-500 transition hover:bg-amber-600 text-white mt-4">SELECT</a>
                 @else
                 <p>Failed to calculate distance and time.</p>
@@ -111,11 +114,11 @@
 
 <section class="container px-6 md:px-4 lg:px-20 mx-auto text-gray-600 my-20 flex flex-col justify-around lg:flex-row gap-16">
     <div class="w-full">
-        <h2 class="text-xl font-semibold mb-4">FAQ</h2>
+        <h2 class="text-xl font-semibold mb-4">@lang('content.faq_hdg1')</h2>
         @include('partials.faq')
     </div>
     <div class="h-80 w-full md:h-96">
-        <h2 class="text-xl font-semibold mb-4">Map</h2>
+        <h2 class="text-xl font-semibold mb-4">@lang('content.map')</h2>
         <div class="w-full h-full" id="map" aria-label="Map showing route from {{ $departureLocationName }} to {{ $destinationLocationName }}"></div>
     </div>
 </section>

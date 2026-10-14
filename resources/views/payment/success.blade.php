@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+@php
+    $locale = app()->getLocale();
+@endphp
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,13 +15,13 @@
         <div class="mb-8">
             <img src="{{asset('images/globus-transfers-logo.jpg')}}" class="logo w-80 mx-auto" alt="Globus Transfers Logo">
         </div>
-        <h1 class="text-3xl font-semibold text-teal-700 mb-4">Thank you for your order!</h1>
+        <h1 class="text-3xl font-semibold text-teal-700 mb-4">@lang('content.payment_success_hdg')</h1>
         <p class="mb-4">
-            Your order has been successfully created. The details of the reservation have been sent to your email
-            <span class="font-bold">{{ $email }}</span>. Thank you for choosing Globus Transfers service.
+            @lang('content.payment_success_para')
+            <span class="font-bold">{{ $email }}</span>. @lang('content.payment_success_para2').
         </p>
         <!-- You can add more content or customization here if needed -->
-        <a href="{{ route('home') }}" class="text-indigo-700 underline text-lg">Back to Home</a>
+        <a href="{{ '/' . $locale }}" class="text-indigo-700 underline text-lg">@lang('content.error_back')</a>
     </div>
 </body>
 </html>
