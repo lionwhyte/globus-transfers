@@ -23,7 +23,6 @@ Globus-Transfers is a robust booking system designed for private transfer servic
 
 1. Clone the repository:
     git clone [https://github.com/lionwhyte/globus-transfers.git](https://github.com/lionwhyte/globus-transfers.git)
-    Install PHP dependencies:
 
 2. Install PHP dependencies:
     composer install
