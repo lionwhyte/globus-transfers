@@ -29,8 +29,8 @@
                 <br>
                 <br>
                 <p><strong>GLOBUS Transfers</strong></p>
-                <p>Ulica dr. Franje Tuđmana 85 23235 Vrsi Hrvatska</p>
-                <p>OIB: 98595920</p>
+                <p>Zadarska 1, Zadar Hrvatska</p>
+                <p>OIB: 123456789</p>
                 <table style="margin: -5;">
                     <tr>
                         <td><img src="{{ public_path('images/globus_icon.jpg') }}" alt="Logo" width="20"></td>
@@ -38,11 +38,11 @@
                     </tr>
                     <tr>
                         <td><img src="{{ public_path('images/envelope_icon.jpg') }}" alt="Logo" width="20"></td>
-                        <td>luka.predovan01@gmail.com</td>
+                        <td>globus@mail.test</td>
                     </tr>
                     <tr>
                         <td><img src="{{ public_path('images/phone_icon.png') }}" alt="Logo" width="15"></td>
-                        <td>+385 95 526 1413</td>
+                        <td>+385 123456789</td>
                     </tr>
                 </table>
             </div>
@@ -114,7 +114,7 @@
                 <p>
                     <strong>IBAN / BANKA: Raiffeisenbank Austria d.d. Zagreb: </strong>
                 </p>
-                <p>HR2924840081135365524</p>
+                <p>HR123456789</p>
                 <p><strong>Model / Poziv na broj: </strong>00 / {{ $invoice_id }}</p>
                 <p>
                     <strong>Napomena: </strong>Ovo nije fiskalizirani račun.
@@ -147,7 +147,7 @@
    <div style="width: 100%; text-align: center;">
     <small>
         Globus Transfers d.o.o. za trgovinu i usluge • Društvo je upisano u registar Trgovačkog suda u Zagrebu / MBS: 081133926 • Temeljni kapital društva iznosi 265,00 eur i
-        uplaćen je u cijelosti • Član uprave: Luka Predovan, direktor
+        uplaćen je u cijelosti • Član uprave: Marko Marković, direktor
     </small>
    </div> --}}
   

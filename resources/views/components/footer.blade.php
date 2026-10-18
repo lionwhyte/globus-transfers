@@ -51,9 +51,9 @@
     <div class="container px-6 md:px-4 lg:px-20 mx-auto text-center mt-8 px-4 xl:flex xl:justify-between">
         <p>@lang('content.footer_copyright')</p>
         <div>
-            <a class="transition hover:text-cyan-600" href={{ "/" . $locale . "/cookie-policy" }}>@lang('content.footer_cookie')</a> | 
-            <a class="transition hover:text-cyan-600" href={{ "/" . $locale . "/terms-and-conditions" }}>@lang('content.footer_terms')</a> | 
-            <a class="transition hover:text-cyan-600" href={{ "/" . $locale . "/privacy-policy" }}>@lang('content.footer_privacy')</a>
+            <a class="transition hover:text-cyan-600" href=#>@lang('content.footer_cookie')</a> | 
+            <a class="transition hover:text-cyan-600" href=#>@lang('content.footer_terms')</a> | 
+            <a class="transition hover:text-cyan-600" href=#>@lang('content.footer_privacy')</a>
         </div>
     </div>
 </footer>

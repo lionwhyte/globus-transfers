@@ -50,7 +50,7 @@
         <p>@lang('content.email_para') {{ ucfirst($routeAndReservationData['first_name']) }},</p>
         <p>@lang('content.email_para2')</p>
         <p>@lang('content.email_para3')</p>
-        <p>@lang('content.email_para4') <a href="mailto:luka.predovan01@gmail.com">@lang('content.email_para5')</a>.</p>
+        <p>@lang('content.email_para4') <a href="mailto:someone@mail.com">@lang('content.email_para5')</a>.</p>
         <p>@lang('content.email_para6')</p>
         <p style="margin: 30px 0;"><strong>@lang('content.email_para7')</strong></p>
     </section>
@@ -176,7 +176,7 @@
     <br>
     <footer>
         <img src="{{ public_path('images/globus-transfers-logo.jpg') }}" alt="Logo" width="250">
-        <p><strong>Globus<br> Ulica dr. Franje Tuđmana 85, Vrsi</strong></p>
+        <p><strong>Globus<br>Zadarska 1, Zadar</strong></p>
     </footer>
 </body>
 </html>

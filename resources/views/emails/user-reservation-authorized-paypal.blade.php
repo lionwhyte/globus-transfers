@@ -50,7 +50,7 @@
         <p>Dear {{ ucfirst($routeAndReservationData['first_name']) }},</p>
         <p>Your taxi reservation has been created. Our team will review it within the next 6 to 12 hours, and we'll notify you once the reservation is confirmed.</p>
         <p>We're looking forward to providing you with a safe and comfortable journey.</p>
-        <p>If you have any questions or need assistance, please feel free to <a href="mailto:luka.predovan01@gmail.com">contact our customer support</a>.</p>
+        <p>If you have any questions or need assistance, please feel free to <a href="mailto:Zadarska 1, Zadar">contact our customer support</a>.</p>
         <p>Check the details of your booking below, and we will contact you as soon as possible!</p>
     </section>
     <section>
@@ -175,7 +175,7 @@
     <br>
     <footer>
         <img src="{{ public_path('images/globus-transfers-logo.jpg') }}" alt="Logo" width="250">
-        <p><strong>Globus<br> Ulica dr. Franje Tuđmana 85, Vrsi</strong></p>
+        <p><strong>Globus<br>Zadarska 1, Zadar</strong></p>
     </footer>
 </body>
 </html>

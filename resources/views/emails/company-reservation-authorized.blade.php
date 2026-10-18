@@ -170,7 +170,7 @@
     <br>
     <footer>
         <img src="{{ public_path('images/globus-transfers-logo.jpg') }}" alt="Logo" width="250">
-        <p><strong>Globus<br> Ulica dr. Franje Tuđmana 85, Vrsi</strong></p>
+        <p><strong>Globus<br>Zadarska 1, Zadar</strong></p>
     </footer>
 </body>
 </html>
