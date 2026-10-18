@@ -21,13 +21,6 @@ use App\Http\Controllers\ReservationController;
 
 Route::get('/', [HomeController::class, 'index'])->name('root');
 
-// Route::get('/', function(){
-//     return view('test');
-// });
-// Route::get('/trigger-error', function () {
-//     abort(500);
-// });
-
 Route::group(['prefix' => '{locale}', 'middleware' => 'setAppLocale'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/search', [RouteController::class, 'search'])->name('search');
@@ -45,15 +38,15 @@ Route::group(['prefix' => '{locale}', 'middleware' => 'setAppLocale'], function 
     Route::get('/faq', function () {
         return view('faq');
     });
-    Route::get('/privacy-policy', function () {
-        return view('privacy-policy');
-    });
-    Route::get('/cookie-policy', function () {
-        return view('cookie-policy');
-    })->name('cookie.policy');
-    Route::get('/terms-and-conditions', function () {
-        return view('terms-and-conditions');
-    });
+    // Route::get('/privacy-policy', function () {
+    //     return view('privacy-policy');
+    // });
+    // Route::get('/cookie-policy', function () {
+    //     return view('cookie-policy');
+    // })->name('cookie.policy');
+    // Route::get('/terms-and-conditions', function () {
+    //     return view('terms-and-conditions');
+    // });
     Route::get('/destinations/cities', [LocationController::class, 'cities'])->name('destinations.cities');
     Route::get('/destinations/airports', [LocationController::class, 'airports'])->name('destinations.airports');
     Route::get('/destinations/ports', [LocationController::class, 'ports'])->name('destinations.ports');
